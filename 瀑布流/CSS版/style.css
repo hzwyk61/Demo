@@ -1,0 +1,33 @@
+div,img{
+	margin:0;
+	padding: 0;
+}
+
+.container{
+	position: relative;
+	-webkit-column-count:5;
+	-moz-column-count: 5;
+	-o-colunm-count:5;
+	-ms-column-count:5;
+	-webkit-column-gap:1px;
+	-moz-column-gap: 5px;
+	-o-colunm-gap:5px;
+	-ms-column-gap:5px;
+}
+
+.container .box{
+	padding: 18px 0 0 18px;
+}
+
+.container .box .pic{
+    padding:10px;
+    border: solid 1px #CCC;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #CCC;
+    width: 220px;
+}
+
+.container .box .pic img{
+	width: 220px;
+	height: auto;
+}
