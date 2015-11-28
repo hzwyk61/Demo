@@ -1,0 +1,549 @@
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    html,
+    body {
+        height: 100%;
+    }
+    
+    body {
+        font: 12px arial;
+    }
+    /* ==========PC端页面布局================================================================ */
+    
+    @media screen and (min-width: 500px) {
+        .weather,
+        .user,
+        .navs,
+        .commonWeb,
+        .realHot,
+        .roundService,
+        .moives,
+        .manage,
+        .bottom_nav,
+        .footing {
+            display: none;
+        }
+        .wallpaper {
+            min-width: 810px;
+            height: 100%;
+            min-height: 550px;
+            position: relative;
+        }
+        /*头部*/
+        .header {
+            width: 100%;
+            height: 60px;
+        }
+        /*导航栏*/
+        .header .heading_bar {
+            float: right;
+            display: inline;
+            list-style-type: none;
+            margin-right: 10px;
+            margin-top: 20px;
+        }
+        .header .heading_bar li {
+            text-align: center;
+            display: inline;
+            font-size: 13px;
+            font-weight: bold;
+            padding: 6px;
+        }
+        /*伪类选择器*/
+        .header .heading_bar a:link {
+            color: black;
+        }
+        .header .heading_bar a:visited {
+            color: black;
+        }
+        .header .heading_bar a:hover {
+            color: blue;
+        }
+        .header .heading_bar ul li .else1 {
+            text-decoration: none;
+        }
+        #nav_logOn,
+        #nav_install {
+            font-weight: normal;
+        }
+        /*关于display:inline-block解决的方法一
+   先用display:inloine-block触发块元素，然后在定义display:inline让块元素呈递为内联对象
+   这样IE的layout属性不会消失。
+   主要针对IE6/IE7*/
+        #nav_more {
+            display: inline-block;
+            background-color: rgb(51, 136, 255);
+            color: white;
+            font-weight: normal;
+            padding: 2px;
+            *padding-top: 3px;
+            /*针对IE6和IE7*/
+            *padding-bottom: 0px;
+            /*针对IE6和IE7*/
+            padding-top: 3px\0;
+            /* 针对IE8和IE9*/
+            padding-bottom: 1px\9\0;
+            /*仅针对IE9*/
+        }
+        #nav_more {
+            display: inline;
+        }
+        /*中间部分*/
+        .center {
+            position: relative;
+            min-height: 200px;
+            top: 35%;
+        }
+        .center .center_box {
+            position: relative;
+            bottom: 218px;
+        }
+        /*图标*/
+        .center .logo {
+            text-align: center;
+            margin: 10px;
+        }
+        /*搜索框*/
+        .center .search_box {
+            text-align: center;
+            width: 650px;
+            margin: 5px auto;
+            position: relative;
+        }
+        /*搜索框文本部分*/
+        .center .search_box .search_text {
+            width: 630px;
+            height: 29px;
+            padding: 2px 2px 2px 6px;
+            border: 1px solid #bababa;
+            line-height: 29px\9;
+            /*针对IE各版本的Input文本框光标不居中，将行高设置成文本框高度*/
+        }
+        .center .search_box .search_text:focus {
+            outline: solid 1px rgb(51, 136, 255);
+            /*focus聚焦，text外边框高亮*/
+        }
+        /*搜索框button*/
+        .center .search_box .search_confirm {
+            background-color: rgb(51, 136, 255);
+            width: 100px;
+            height: 35px;
+            color: white;
+            font-size: 15px;
+            border: 1px solid rgb(51, 136, 255);
+            *border: none;
+            position: absolute;
+            margin-left: -100px;
+            *margin-left: -103px;
+            cursor: pointer;
+        }
+        .center .search_box .search_confirm:active {
+            background-color: #1356BA;
+        }
+        /*mic图标*/
+        .center .search_box .mic {
+            background: url(image/Mic.png);
+            background-size: 37px 20px;
+            position: absolute;
+            height: 20px;
+            width: 15px;
+            left: 518px;
+            top: 9px;
+            cursor: pointer;
+        }
+        /*底部*/
+        .footer {
+            height: 100px;
+            overflow: hidden;
+            position: absolute;
+            bottom: 44px;
+            bottom: 0\0;
+            text-align: center;
+            width: 100%;
+            margin: 0 auto;
+        }
+        .footer .footing_bar li {
+            display: inline;
+            margin: 10px;
+            font-size: 12px;
+        }
+        /*底部伪类*/
+        .footer .footing_bar a:link {
+            color: blue;
+        }
+        .footer .footing_bar a:visited {
+            color: blue;
+        }
+        .footer .footing_note {
+            color: gray;
+            margin: 5px;
+        }
+        .footer .footing_note a {
+            color: gray;
+        }
+        .footer .footing_note img {
+            margin-bottom: -8px;
+        }
+    }
+    /* ==========手机端端页面布局================================================================ */
+    
+    @media screen and (max-width: 500px) {
+        .header .heading_bar,
+        .footer {
+            display: none;
+        }
+        .wallpaper {
+            position: relative;
+            padding: 5px 10px;
+        }
+        /* ==========头部=========================================== */
+        .weather {
+            display: inline-block;
+            cursor:pointer;
+        }
+        .weather span {
+            font-size: 30px;
+            color: #818388;
+        }
+        .weather .air {
+            display: inline-block;
+            font-size: 11px;
+            color: #7e818a;
+            border-left: solid 1px rgb(238, 238, 238);
+            margin-left: 5px;
+            padding-left: 5px;
+        }
+        .weather .air p {
+            height: 13px;
+            line-height: 13px;
+        }
+        .weather .air img {
+            margin-left: 5px;
+            position: relative;
+            top: 2px;
+        }
+        .user {
+            display: inline-block;
+            float: right;
+            cursor:pointer;
+        }
+        .user img {
+            height: 23px;
+            opacity: 0.5;
+        }
+        /* ==========搜索栏========================================== */
+        .center .center_box .logo {
+            text-align: center;
+        }
+        .center .center_box .logo img {
+            width: 240px;
+        }
+        .center .search_box {
+            display: inline-block;
+            position: relative;
+            width: 100%
+        }
+        .center .search_box .search_text {
+            box-sizing: border-box;
+            width: 100%;
+            height: 42px;
+            padding: 5px 10px;
+            position: absolute;
+        }
+        .center .search_box .mic {
+            background: url(image/Mic.png);
+            background-size: 37px 20px;
+            position: absolute;
+            right: 88px;
+            height: 20px;
+            width: 15px;
+            top: 9px;
+            cursor: pointer;
+        }
+        .center .search_box .search_confirm {
+            width: 79px;
+            height: 42px;
+            line-height: 42px;
+            float: right;
+            letter-spacing: -1px;
+            font-weight: 700;
+            font-size: 16px;
+            position: relative;
+            color: #46484b;
+        }
+        /* ==========主导航栏========================================== */
+        .navs {
+            margin-top: 20px;
+            width: 100%;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .navs .nav_one,
+        .navs .nav_two {
+            position: relative;
+            height: 50px;
+            display: flex;
+            flex-flow: row nowrap;
+        }
+        .navs a {
+            float: left;
+            flex: 1 1 100%;
+            text-decoration: none;
+            color: #262626;
+        }
+        .navs a img {
+            height: 20px;
+            opacity: 0.8;
+            margin-bottom: 5px;
+        }
+        .navs .nav_two a:nth-child(5),
+        .navs .nav_two a:nth-child(6) {
+            opacity: 0;
+        }
+        /* ==========常用网址========================================== */
+        .commonWeb {
+            width: 100%;
+            height: 123px;
+            border: solid 1px rgb(217, 221, 266);
+            margin-top: 20px;
+        }
+        .commonWeb .cwTitle {
+            margin: 5px 10px;
+        }
+        .commonWeb .cwTitle img {
+            margin-bottom: -3px
+        }
+        .commonWeb .cwTitle span {
+            line-height: 40px;
+            font-size: 15px;
+            font-weight: 400;
+            color: #aaa;
+        }
+        .commonWeb .cwTitle a img {
+            float: right;
+            margin-top: 5px;
+        }
+        .commonWeb .cwContent .cw_one,
+        .commonWeb .cwContent .cw_two {
+            display: flex;
+            flex-flow: row nowrap;
+            height: 30px;
+        }
+        .commonWeb .cwContent a {
+            font-size: 14px;
+            flex: 1 1 100%;
+            text-decoration: none;
+            color: #262626;
+            text-align: center;
+            line-height: 30px;
+        }
+        .commonWeb .cwContent .cw_two a:nth-child(3) {
+            margin-top: 5px;
+        }
+        .commonWeb .cwContent .cw_two a:nth-child(4) {
+            opacity: 0;
+        }
+        /* ==========实时热点========================================== */
+        .realHot {
+            width: 100%;
+            height: 160px;
+            border: solid 1px rgb(217, 221, 266);
+            margin-top: 20px;
+        }
+        .realHot .rhTitle {
+            margin: 5px 10px;
+            position: relative;
+        }
+        .realHot .rhTitle img {
+            margin-bottom: -3px
+        }
+        .realHot .rhTitle span {
+            line-height: 40px;
+            font-size: 15px;
+            font-weight: 400;
+            color: #aaa;
+        }
+        .realHot .rhTitle .change {
+            display: inline-block;
+            position: absolute;
+            top: 10px;
+            right: 35px;
+            font-size: 14px;
+        }
+        .realHot .rhTitle a img {
+            float: right;
+            margin-top: 8px;
+        }
+        .realHot .rhContent table {
+            margin: 2px auto;
+            width: 90%;
+        }
+        .realHot .rhContent table tr td {
+            font-size: 14px;
+            width: 135px;
+            height: 33px;
+        }
+        /* ==========周边服务========================================== */
+        .roundService {
+            width: 100%;
+            height: 250px;
+            border: solid 1px rgb(217, 221, 266);
+            margin-top: 20px;
+        }
+        .roundService .rsTitle {
+            margin: 5px 10px;
+            position: relative;
+        }
+        .roundService .rsTitle img {
+            margin-bottom: -3px
+        }
+        .roundService .rsTitle span {
+            line-height: 40px;
+            font-size: 15px;
+            font-weight: 400;
+            color: #aaa;
+        }
+        .roundService .rsTitle a img {
+            float: right;
+            margin-top: 6px;
+        }
+        .roundService .rsPosition {
+            position: relative;
+        }
+        .roundService .rsPosition span {
+            font-size: 15px;
+            margin-left: 13px;
+            height: 35px;
+            line-height: 35px;
+            display: inline-block;
+        }
+        .roundService .rsPosition img {
+            position: absolute;
+            right: 10px;
+        }
+        .roundService .rsContent .rs-one,
+        .roundService .rsContent .rs-two {
+            display: flex;
+            flex-flow: row nowrap;
+        }
+        .roundService .rsContent a {
+            font-size: 14px;
+            flex: 1 1 100%;
+            text-decoration: none;
+            color: #262626;
+            text-align: center;
+            line-height: 30px;
+        }
+        .roundService .rsContent a img {
+            width: 47px;
+            height: 48px;
+        }
+        /* ==========电影========================================== */
+        .moives {
+            width: 100%;
+            height: 230px;
+            border: solid 1px rgb(217, 221, 266);
+            margin-top: 20px;
+            cursor:pointer;
+        }
+        .moives .mTitle {
+            margin: 5px 10px;
+            position: relative;
+        }
+        .moives .mTitle img {
+            margin-bottom: -3px;
+            cursor:pointer;
+        }
+        .moives .mTitle span {
+            line-height: 40px;
+            font-size: 15px;
+            font-weight: 400;
+            color: #aaa;
+        }
+        .moives .mTitle .change {
+            display: inline-block;
+            position: absolute;
+            top: 10px;
+            right: 35px;
+            font-size: 14px;
+        }
+        .moives .mTitle a img {
+            float: right;
+            margin-top: 6px;
+        }
+        .moives .mContent {
+            position: relative;
+        }
+        .moives .mContent img {
+            margin-left: 10px;
+        }
+        .moives .mContent p {
+            position: absolute;
+            right: 15px;
+            width: 100%;
+            font-size: 14px;
+            height: 40px;
+            line-height: 40px;
+            color: #0058d2!important;
+            text-align: right;
+        }
+        /* ==========底部导航区========================================== */
+        .manage {
+            border: 1px solid #d9dde2;
+            margin-top: 8px;
+            width: 100%;
+            text-align: center;
+            cursor:pointer;
+        }
+        .manage p {
+            padding: 0;
+            line-height: 45px;
+            height: 45px;
+            color: #0058d2;
+            font-size: 15px;
+            text-indent: -8px;
+        }
+        .manage img {
+            margin-bottom: -7px;
+        }
+        .bottom_nav {
+            margin: 15px 10px;
+        }
+        .bottom_nav p {
+            height: 33px;
+            line-height: 33px;
+            text-align: left;
+            position: relative;
+            font-size: 13px;
+            color: #555;
+            cursor:pointer;
+        }
+        .bottom_nav i img {
+            float: right;
+        }
+        /* ==========底部按钮及版权声明区========================================== */
+        .footing {
+            text-align: center;
+            margin: 10px auto;
+        }
+        .footing button {
+            background-color: #FFF;
+            height: 24px;
+            width: 43%;
+            line-height: 24px;
+            border: 1px solid #ececec;
+            border-radius: 1px;
+            color: #555;
+            font-size: 13px;
+            margin: 0 3px 10px 3px;
+            cursor:pointer;
+        }
+        .footing p {
+            font-size: 10px;
+            line-height: 20px;
+            color: #aaa;
+        }
+    }
