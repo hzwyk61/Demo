@@ -1,0 +1,148 @@
+*{
+    font-family: '微软雅黑';
+}
+nav .container-fluid {
+    width: 1100px;
+    position: relative;
+}
+
+nav .container-fluid img {
+    height: 65px;
+    position: absolute;
+    right: 10px;
+}
+
+.navbar{
+	margin-bottom: 0; 
+}
+
+nav .container-fluid .systemName li {
+    line-height: 65px;
+    font-weight: bold;
+    font-size: 20px;
+    color: transparent;
+    background-color: rgb(138,138,138);
+    text-shadow: rgba(255, 255, 255, 0.5) 0 5px 6px, rgba(255, 255, 255, 0.2) 1px 3px 3px;
+    -webkit-background-clip : text;
+    cursor: default;
+}
+
+article{
+	width: 1100px;
+	height: 620px;
+	margin: 0 auto;
+    padding-top: 65px;
+	border-right: solid 1px rgb(231,231,231); 
+}
+
+article .sideBar{
+	width: 200px;
+	height: 100%;
+    border: solid 1px rgb(231,231,231); 
+    background-color: rgb(248,248,248);
+    float: left;
+    position: fixed;
+}
+
+article .sideBar .managerMenu{
+	width: 200px;
+    padding: 25px 22px;
+}
+
+article .sideBar a{
+	margin: 18px auto;
+}
+
+article .mainContent{
+	width: 899px;
+	height: 100%;
+	float: left;
+	padding:30px 38px;
+    margin-left: 200px;
+}
+
+article .mainContent .homePage{}
+
+article .mainContent .homePage .articleHead{
+     font-family: "微软雅黑";
+     font-size: 16px;
+     font-weight: bold;
+}
+
+article .mainContent .homePage .articleHead small{
+     color: blue;
+     font-size: 13px;
+     margin-left: 10px;
+     font-weight: normal;
+}
+
+article .mainContent .homePage .artTitle{
+     height: 100px;
+}
+
+article .mainContent .homePage .artTitle h2{
+     display: inline-block;
+}
+article .mainContent .homePage .artTitle h2 a{
+     color: rgb(39,135,210);
+    }
+article .mainContent .homePage .artTitle h2 a:hover{
+    color: rgb(51,122,183);
+}
+
+article .mainContent .homePage .artTitle small{
+     float: right;
+     color: gray;
+     margin-right: 10px;
+     margin-top: 60px;
+}
+
+article .mainContent .homePage .abstract{
+     text-overflow:ellipsis;
+     overflow: hidden;
+     font-family: "微软雅黑";
+     white-space:nowrap;
+}
+
+article .mainContent .newsList h3{
+     margin-bottom: 35px;
+}
+
+article .mainContent .newsList .warning td{
+     vertical-align: middle;
+     padding: 0 10px;
+}
+
+article .mainContent .newsList #handle a{
+    margin-top: 5px;
+    width: 60px;
+    height: 35px;
+    line-height: 35px;
+    padding: 0;
+    font-size: 14px;
+}
+
+article .mainContent .newsAdd h3{
+    margin-bottom: 20px;
+}
+article .mainContent .newsModify .button,
+article .mainContent .newsAdd .button{
+   float: right;
+   margin-left: 10px;
+   margin-top:20px;
+}
+
+article .mainContent .article .newTitle{
+    font-weight: bold;
+    font-size: 21px;
+    color: skyblue;
+    display: inline-block;
+}
+
+article .mainContent .article .newAuthor{
+   display: inline-block;
+   color: lightgray;
+}
+article .mainContent .article .newCon{
+    text-indent: 2em;
+}

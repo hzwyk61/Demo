@@ -1,0 +1,25 @@
+.new {
+    margin: 10px 15px 25px 15px;
+}
+
+.new .title a {
+    color: rgb(39, 135, 210);
+    font-weight: bold;
+    font-size: 17px;
+    margin: 8px auto;
+}
+
+.new .author {
+    color: gray;
+    font-size: 13px;
+    margin: 5px;
+}
+
+.new .content {
+    text-indent: 2em;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-family: "微软雅黑";
+    white-space: nowrap;
+}

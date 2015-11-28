@@ -1,0 +1,77 @@
+html,
+body,
+header,
+article,
+footer,
+div,
+ul,
+li {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    display: none;
+}
+
+@media screen and (max-width: 560px) {
+    html {
+        display: block;
+    }
+    .header {
+        position: relative;
+        min-width: 320px;
+        height: 44px;
+        background-color: #3e98f0;
+        text-align: center;
+        font-weight: 400;
+        color: #fff;
+    }
+    .header .back {
+        display: block;
+        float: left;
+        width: 34px;
+        height: 100%;
+        font-size: 15px;
+        line-height: 44px;
+        background: url(../img/bg-new-toolbar.png) no-repeat center -216px;
+        background-size: 40px 500px;
+    }
+    .header .sort {
+        line-height: 44px;
+        text-align: center;
+    }
+    .header .logo {
+        display: block;
+        float: right;
+        width: 34px;
+        height: 100%;
+        font-size: 15px;
+        line-height: 44px;
+        background: url(../img/bg-new-toolbar.png) no-repeat center 4px;
+        background-size: 40px 500px;
+    }
+    .article {
+        margin: 10px 15px;
+    }
+    .article .title {
+        color: rgb(39, 135, 210);
+        font-weight: bold;
+        font-size: 17px;
+        margin: 8px auto;
+    }
+    .article .author {
+        color: gray;
+        font-size: 13px;
+        margin: 5px;
+    }
+    .article .date {
+        color: gray;
+        font-size: 13px;
+        margin: 5px;
+    }
+    .article .content {
+        text-indent: 2em;
+        font-size: 14px;
+    }
+}

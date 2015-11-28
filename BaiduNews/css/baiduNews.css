@@ -1,0 +1,119 @@
+html,
+body,
+header,
+article,
+footer,
+div,
+ul,
+li {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(39, 135, 210);
+}
+
+html {
+    display: none;
+}
+
+@media screen and (max-width: 560px) {
+    html {
+        display: block;
+    }
+    header {
+        position: relative;
+        min-width: 320px;
+        height: 120px;
+        background-color: #3e98f0;
+        text-align: center;
+        font-weight: 400;
+        color: #fff;
+    }
+    header .title {
+        height: 44px;
+    }
+    header .title span {
+        display: block;
+        width: 34px;
+        height: 100%;
+        font-size: 15px;
+        line-height: 44px;
+        background: url(../img/bg-new-toolbar.png) no-repeat;
+        background-size: 40px 500px;
+    }
+    header .title .wapBaidu {
+        background-position: center 4px;
+        float: left;
+    }
+    header .title .userHome {
+        background-position: center -463px;
+        margin-left: 10px;
+        float: left;
+    }
+    header .title .search {
+        background-position: center -162px;
+        margin-right: 10px;
+        float: right;
+    }
+    header .title .subscribe {
+        background-position: center -107px;
+        float: right;
+    }
+    header .title .logo {
+        display: inline-block;
+        width: 82px;
+        height: 44px;
+        font-size: 15px;
+        line-height: 44px;
+        background: url(../img/bg-news-logo.png) no-repeat center 6px;
+        background-size: 77px auto;
+        margin: 0 auto;
+    }
+    header .headerLine {
+        height: 1px;
+        margin: 0 10px;
+        background-color: #5dabf0;
+    }
+    header .nav table {
+        width: 100%;
+    }
+    header .nav .navbar {
+        position: relative;
+        height: 33px;
+        font-size: 16px;
+        line-height: 32px;
+        font-weight: 400;
+        text-align: center;
+    }
+    header .nav .navbar b {
+        position: absolute;
+        top: 10px;
+        left: 0;
+        height: 12px;
+        width: 1px;
+        display: block;
+        overflow-y: hidden;
+        background-color: #5dabf0;
+    }
+    header .nav .net {
+        margin: 0 14px;
+    }
+    header .nav .moreBar {
+        position: relative;
+    }
+    header .nav .moreBar .down-triangle {
+        display: inline-block;
+        position: absolute;
+        right: 2px;
+        top: 14px;
+        width: 0;
+        height: 0;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-top: 4px solid #fff;
+    }
+    /*内容部分*/
+}
