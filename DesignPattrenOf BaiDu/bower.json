@@ -1,0 +1,7 @@
+{
+  "name": "baidu-designPattern",
+  "private": true,
+  "devDependencies": {
+    "jquery": "~2.1.4"
+  }
+}
