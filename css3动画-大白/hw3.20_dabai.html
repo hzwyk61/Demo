@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="hw3.20_dabai.css" type="text/css">
+    <script>
+    // 点击选项更换背景图片和音乐的播放/暂停，点击大白胸口的小圆圈返回原背景颜色。
+    // 为什么我将下面三个变量设置能全局变量，结果后面的三个函数用不了？
+    // 必须在每一个方法里声明才可以   
+    // var audio_one = document.getElementById("song_one");
+    // var audio_two = document.getElementById("song_two");
+    // var audio_three = document.getElementById("song_three");
+    function warm() {
+        document.body.style.backgroundImage = "url(img/warming.jpg)";
+        var audio_one = document.getElementById("song_one");
+        var audio_two = document.getElementById("song_two");
+        var audio_three = document.getElementById("song_three");
+        if (audio_one.paused) {
+            audio_one.play();
+            audio_two.pause();
+            audio_three.pause();
+        } else {
+            audio_one.pause();
+        }
+    }
+
+    function loving() {
+        document.body.style.backgroundImage = "url(img/loving.jpg)";
+        var audio_one = document.getElementById("song_one");
+        var audio_two = document.getElementById("song_two");
+        var audio_three = document.getElementById("song_three");
+        if (audio_two.paused) {
+            audio_two.play();
+            audio_one.pause();
+            audio_three.pause();
+        } else {
+            audio_two.pause();
+        }
+    }
+
+    function sad() {
+        document.body.style.backgroundImage = "url(img/sading.jpg)";
+        var audio_one = document.getElementById("song_one");
+        var audio_two = document.getElementById("song_two");
+        var audio_three = document.getElementById("song_three");
+        if (audio_three.paused) {
+            audio_three.play();
+            audio_one.pause();
+            audio_two.pause();
+        } else {
+            audio_two.pause();
+        }
+    }
+
+    function back() {
+        document.body.style.backgroundImage = "none";
+    }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="leftEye"></div>
+            <div class="noseLine"></div>
+            <div class="rightEye"></div>
+        </div>
+        <div class="coat">
+            <div class="leftBody">
+                <div class="leftArm"></div>
+                <div class="leftHand"></div>
+            </div>
+            <div class="rightBody">
+                <div class="rightArm"></div>
+                <div class="rightHand"></div>
+            </div>
+            <div class="upBody">
+                <div class="heart_1" onclick="back()">
+                    <div class="leftLine_1"></div>
+                    <div class="square_1"></div>
+                    <div class="rightLine_1"></div>
+                </div>
+                <div class="heart_2" onclick="back()">
+                    <div class="leftLine_2"></div>
+                    <div class="square_2"></div>
+                    <div class="rightLine_2"></div>
+                </div>
+                <div class="hello">
+                    <h5>How are you feeling today?</h5>
+                    <div class="imgFace">
+                        <img src="img/warm.jpg" alt="warming" id="imgOne">
+                        <img src="img/cute.jpg" alt="loving" id="imgTwo">
+                        <img src="img/sad.jpg" alt="sad" id="imgThree">
+                    </div>
+                    <form>
+                        <input type="radio" name="mood" id="checkOne" onclick="warm()">warming
+                        <input type="radio" name="mood" id="checkTwo" onclick="loving()">loving
+                        <input type="radio" name="mood" id="checkThree" onclick="sad()">sad
+                    </form>
+                </div>
+            </div>
+            <div class="downBody">
+                <div class="leftThigh"></div>
+                <div class="rightThigh"></div>
+            </div>
+        </div>
+        <div class="audio">
+            <audio id="song_one" src="audio/warm.mp3" controls="controls" loop="ture" hidden="true"></audio>
+            <audio id="song_two" src="audio/loving.mp3" controls="controls" loop="ture" hidden="true"></audio>
+            <audio id="song_three" src="audio/sad.mp3" controls="controls" loop="ture" hidden="true"></audio>
+        </div>
+    </div>
+</body>
+
+</html>
