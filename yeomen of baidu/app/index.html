@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>百度一下，你就知道</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" href="/favicon.ico">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="weather">
+                <span>拉萨:</span>
+                <i></i>
+                <span>15℃</span>
+                <b>优&nbsp;<span>91</span></b>
+                <span class="split">|</span>
+            </div>
+            <div class="headerOption">
+                <a href="javascript:;">宝箱</a>
+                <a href="javascript:;">换肤</a>
+                <a href="javascript:;">消息</a>
+            </div>
+            <div class="headerNav">
+                <ul>
+                    <li><a href="javascript:;">新闻</a></li>
+                    <li><a href="javascript:;">hao123</a></li>
+                    <li><a href="javascript:;">地图</a></li>
+                    <li><a href="javascript:;">视频</a></li>
+                    <li><a href="javascript:;">贴吧</a></li>
+                    <li class="userName"><a href="javascript:;">Nacy</a>
+                        <ul class="person">
+                            <li>我的VIP</li>
+                            <li>个人中心</li>
+                            <li>账号设置</li>
+                            <li>意见反馈</li>
+                            <li>退出</li>
+                        </ul>
+                    </li>
+                    <li class="install"><a href="javascript:;">设置</a>
+                        <ul class="headInstall">
+                            <li>搜索设置</li>
+                            <li>高级搜索</li>
+                            <li>关闭预测</li>
+                            <li>搜索历史</li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:;" id="moreProduct">更多产品</a>
+                         <div class="sideBar">
+                             <ul>
+                                 <li><a href="javascript:;" class="moreProduct">更多产品</a></li>
+                                 <li><a href="javascript:;"><img src="/images/sideBar/nuomi_version1.png">糯米</a></li>
+                                 <li><a href="javascript:;"><img src="/images/sideBar/zhidao.png">知道</a></li>
+                                 <li><a href="javascript:;"><img src="/images/sideBar/music.png">音乐</a></li>
+                                 <li><a href="javascript:;"><img src="/images/sideBar/image.png">图片</a></li>
+                                 <li><a href="javascript:;"><img src="/images/sideBar/wenku.png">文库</a></li>
+                                 <li><a href="javascript:;"><img src="/images/sideBar/bang.png">风云榜</a></li>
+                                 <li><a href="javascript:;"><img src="/images/sideBar/tuiguang.png">百度推广</a></li>
+                                 <li><a href="javascript:;">全部产品&gt;&gt;</a></li>
+                             </ul>
+                         </div>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <article>
+            <section class="searchBox">
+                <div class="logo">
+                    <img src="/images/bdlogo.png" alt="baiduLogo">
+                </div>
+                <div class="search">
+                    <input type="text">
+                    <button class="btn">百度一下</button>
+                </div>
+            </section>
+            <section class="tab">
+                <div class="tabTitle">
+                    <a href="javascript:;" class="tabMenu selected" index="1">导航</a>
+                    <a href="javascript:;" class="tabMenu" index="2">新闻</a>
+                    <a href="javascript:;" class="tabMenu" index="3">音乐</a>
+                    <a href="javascript:;" class="tabMenu" index="4">购物</a>
+                    <a href="javascript:;" class="tabMenu" index="5">视频</a>
+                    <a href="javascript:;" class="tabOption"><i></i></a>
+                </div>
+                <div class="tabContainer">
+                    <div class="nav tabCon onTab">
+                        <div class="navTitle">
+                            <div id="navlist">
+                                <a href="javascript:;" id="myNav" class="titleSelected">我的导航</a>
+                                <a href="javascript:;" id="hotNav">推荐导航</a>
+                            </div>
+                            <div class="navOption">
+                                <a href="javascript:;" class="add"><i></i>添加</a>
+                                <a href="javascript:;" class="edit"><i></i>编辑</a>
+                            </div>
+                        </div>
+                        <div class="navContainer">
+                            <div class="myNav">
+                                <ul>
+                                    <li>
+                                        <a href="javascript:;"><img src="/images/baiduico.png" alt="">百度贴吧</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;"><img src="/images/taobaoico.png" alt="">淘宝网</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;"><img src="/images/sinaico.png" alt="">新浪微博</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;"><img src="/images/amazeico.png" alt="">亚马逊</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;"><img src="/images/hao123ico.png" alt="">hao123</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <img src="/images/JDico.png" alt=""> 京东商城
+                                            <img src="/images/fanliiico.png" class="imged" alt=""></a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;"><img src="/images/youku.png" alt="">优酷网</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;"><img src="/images/pptvico.png" alt="">PPTV</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;"><img src="/images/12306.png" alt="">铁路客服中心</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;"><img src="/images/biliico.png" alt="">bilibli</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="hotNav">
+                                <div class="hotTitle">热门网址</div>
+                                <div class="hotArea">
+                                    <ul>
+                                        <li>
+                                            <a href="javascript:;"><img src="/images/hot/taobao.png" alt="淘宝"></a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;"><img src="/images/hot/58.png" alt="58同城"></a>
+                                        </li>
+                                        <li class="reProfit"><i></i>
+                                            <span><a href="javascript:;" class="reLink">最高返利80%</a></span>
+                                            <a href="javascript:;"><img src="/images/hot/JD.png" alt="京东商城"></a>
+                                        </li>
+                                        <li class="reProfit"><i></i>
+                                            <span><a href="javascript:;" class="reLink">最高返利3.54%</a></span>
+                                            <a href="javascript:;"><img src="/images/hot/nuomi.png" alt="百度糯米"></a>
+                                        </li>
+                                        <li class="reProfit"><i></i>
+                                            <span><a href="javascript:;" class="reLink">最高返利81%</a></span>
+                                            <a href="javascript:;"><img src="/images/hot/1haodian.png" alt="1号店"></a>
+                                        </li>
+                                        <li class="reProfit"><i></i>
+                                            <span><a href="javascript:;" class="reLink">最高返利3%</a></span>
+                                            <a href="javascript:;"><img src="/images/hot/xiecheng.png" alt="携程"></a>
+                                        </li>
+                                        <li class="reProfit"><i></i>
+                                            <span><a href="javascript:;" class="reLink">最高返利2.8%</a></span>
+                                            <a href="javascript:;"><img src="/images/hot/suning.png" alt="苏宁易购"></a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;"><img src="/images/hot/baiduVip.png" alt="百度vip"></a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;"><img src="/images/hot/mafengwo.png" alt="马蜂窝"></a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;"><img src="/images/hot/windows.png" alt="windows"></a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;"><img src="/images/hot/baixingwang.png" alt="百姓网"></a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;"><img src="/images/hot/docotor.png" alt="寻医问药网"></a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;"><img src="/images/hot/yicar.png" alt="易车"></a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;"><img src="/images/hot/zhongchao.png" alt="纵横小说"></a>
+                                        </li>
+                                        <li class="reProfit"><i></i>
+                                            <span><a href="javascript:;" class="reLink">最高返利3.36%</a></span>
+                                            <a href="javascript:;"><img src="/images/hot/zhenping.png" alt="珍品网"></a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;"><img src="/images/hot/aiqiyi.png" alt="爱奇艺"></a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;"><img src="/images/hot/sina.png" alt="新浪"></a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;"><img src="/images/hot/caipiao.png" alt="百度彩票"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news tabCon">
+                        <div class="banner">
+                            <div class="imgBox">
+                                <div class="imgList" style="left: -425px;">
+                                    <a href="javascript:;"><img src="/images/newsPlay/51.jpg" alt=""></a>
+                                    <a href="javascript:;"><img src="/images/newsPlay/11.jpg" alt=""></a>
+                                    <a href="javascript:;"><img src="/images/newsPlay/21.jpg" alt=""></a>
+                                    <a href="javascript:;"><img src="/images/newsPlay/31.jpg" alt=""></a>
+                                    <a href="javascript:;"><img src="/images/newsPlay/41.jpg" alt=""></a>
+                                    <a href="javascript:;"><img src="/images/newsPlay/51.jpg" alt=""></a>
+                                    <a href="javascript:;"><img src="/images/newsPlay/11.jpg" alt=""></a>
+                                </div>
+                                <span class="arrowLeft" id="arrowLeft"></span>
+                                <span class="arrowRight" id="arrowRight"></span>
+                                <span class="imgTitle">
+                                    <a href="javascript:;" id="imgTitle">
+                                        印度街头有毒泡沫飞扬
+                                    </a>
+                                </span>
+                            </div>
+                            <div class="thumbnailBox">
+                                <div class="thumbnail">
+                                    <a href="javascript:;" index="1" class="imgSelect"><img src="/images/newsPlay/12.jpg"></a>
+                                    <a href="javascript:;" index="2"><img src="/images/newsPlay/22.jpg" alt=""></a>
+                                    <a href="javascript:;" index="3"><img src="/images/newsPlay/32.jpg" alt=""></a>
+                                    <a href="javascript:;" index="4"><img src="/images/newsPlay/42.jpg" alt=""></a>
+                                    <a href="javascript:;" index="5"><img src="/images/newsPlay/52.jpg" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="searchBand">
+                            <div class="bandTitle">
+                                <span><i></i><a href="javascript:;">搜索风云榜</a></span>
+                                <div class="bandChange">
+                                    <a href=""><i></i>换一换</a>
+                                </div>
+                            </div>
+                            <div class="bandList">
+                                <ul>
+                                    <li><a href="javascript:;">天津北辰爆炸</a></li>
+                                    <li><a href="javascript:;">男子换电池炸伤眼</a></li>
+                                    <li><a href="javascript:;">年轻女打伤老太</a></li>
+                                    <li><a href="javascript:;">村霸猥亵留守女童</a></li>
+                                    <li><a href="javascript:;">湖南现奇树</a></li>
+                                    <li><a href="javascript:;">曝范冰冰李晨领证</a></li>
+                                    <li><a href="javascript:;">央行释放7万亿</a></li>
+                                    <li><a href="javascript:;">女神老师晒健身照</a></li>
+                                    <li><a href="javascript:;">姚笛罕见自拍</a></li>
+                                    <li><a href="javascript:;">黄渤进军互联网</a></li>
+                                    <li><a href="javascript:;">盗墓贼专偷女盖骨</a></li>
+                                    <li><a href="javascript:;">女老师讲人体器官</a></li>
+                                    <li><a href="javascript:;">女子将男友毁容</a></li>
+                                    <li><a href="javascript:;">米雪素颜近照</a></li>
+                                    <li><a href="javascript:;">急诊4毛钱药治病</a></li>
+                                    <li><a href="javascript:;">歌手阿杜变老板</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="newsList"></div>
+                    </div>
+                    <div class="music tabCon">
+                        <img src="/images/music20151017204619.png" alt="" />
+                    </div>
+                    <div class="shopping tabCon">
+                        <div class="shopNav">
+                            <div class="shopTitle">
+                                <a href="javascript:;" class="shopSelect">糯米优选</a>
+                            </div>
+                            <div class="myShop">
+                                <span>我的账户<i></i></span>
+                                <a href="javascript:;">查看更多</a>
+                            </div>
+                        </div>
+                        <div class="goodsList">
+                            <div class="shopCon">
+                                <div class="nuomiShow">
+                                    <a href="javascript:;">
+                                        <img src="/images/shopping/1.jpg" alt="">
+                                        <div class="goodsAttr">
+                                            <a href="javascript:;">三只松鼠坚果组合</a><b>￥56.9</b>
+                                            <p><span>27199</span>人团购</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="nuomiShow">
+                                    <a href="javascript:;">
+                                        <img src="/images/shopping/2.jpg" alt="">
+                                        <div class="goodsAttr">
+                                            <a href="javascript:;">老胶坊阿胶</a><b>￥49</b>
+                                            <p><span>14242</span>人团购</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="nuomiShow">
+                                    <a href="javascript:;">
+                                        <img src="/images/shopping/3.jpg" alt="">
+                                        <div class="goodsAttr">
+                                            <a href="javascript:;">三只松鼠东北松子原味</a><b>￥69</b>
+                                            <p><span>7393</span>人团购</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="nuomiShow">
+                                    <a href="javascript:;">
+                                        <img src="/images/shopping/4.jpg" alt="">
+                                        <div class="goodsAttr">
+                                            <a href="javascript:;">12种干果礼盒</a><b>￥69</b>
+                                            <p><span>12125</span>人团购</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="nuomiShow">
+                                    <a href="javascript:;">
+                                        <img src="/images/shopping/5.jpg" alt="">
+                                        <div class="goodsAttr">
+                                            <a href="javascript:;">百搭长款女毛衣项链</a><b>￥9.9</b>
+                                            <p><span>3697</span>人团购</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="nuomiShow">
+                                    <a href="javascript:;">
+                                        <img src="/images/shopping/6.jpg" alt="">
+                                        <div class="goodsAttr">
+                                            <a href="javascript:;">双驱动神奇旋转拖把</a><b>￥69</b>
+                                            <p><span>7235</span>人团购</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="cate"></div>
+                            <div class="moives"></div>
+                            <div class="play"></div>
+                        </div>
+                        <div class="goodsMenu">
+                            <div class="sale">
+                                <i></i><a href="javascript:;">超级返-玛萨玛索男装</a>
+                                <span><a href="javascript:;">全网返利50%</a></span>
+                            </div>
+                            <div class="rebateMall saleCon">
+                                <p>返利商城</p>
+                                <ul>
+                                    <li><a href="javascript:;">百度糯米</a></li>
+                                    <li><a href="javascript:;">京东商城</a></li>
+                                    <li><a href="javascript:;">当当</a></li>
+                                    <li><a href="javascript:;">1号店</a></li>
+                                    <li><a href="javascript:;">苏宁易购</a></li>
+                                    <li><a href="javascript:;">更多</a></li>
+                                </ul>
+                            </div>
+                            <div class="freeTicket saleCon">
+                                <p>免费优惠卷</p>
+                                <ul>
+                                    <li><a href="javascript:;">洗衣券</a></li>
+                                    <li><a href="javascript:;">化妆品券</a></li>
+                                    <li><a href="javascript:;">免费书券</a></li>
+                                    <li><a href="javascript:;">汽车打蜡</a></li>
+                                    <li><a href="javascript:;">手机维修</a></li>
+                                    <li><a href="javascript:;">更多</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video tabCon">
+                        <div class="videoNav">
+                            <a href="javascript:;" class="videoSelect" index="1">猜你喜欢</a>
+                            <a href="javascript:;" index="2">综艺</a>
+                            <a href="javascript:;" index="3">电视剧</a>
+                            <a href="javascript:;" index="4">电影</a>
+                            <a href="javascript:;" index="5">动漫</a>
+                        </div>
+                        <div class="videoBanner">
+                            <div class="videoSwitch">
+                                <span index="1" class="videoSwitchSelect"></span>
+                                <span index="2"></span>
+                                <span index="3"></span>
+                                <span index="4"></span>
+                                <span index="5"></span>
+                            </div>
+                            <div class="videoBox">
+                                <div class="likeList innerList onList">
+                                    <div class="likeImg">
+                                        <a href="javascript:;"><img src="/images/video/1.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">超能陆战队</a></span>
+                                    </div>
+                                    <div class="likeImg">
+                                        <a href="javascript:;"><img src="/images/video/2.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">火鸡总动员</a></span>
+                                    </div>
+                                    <div class="likeImg">
+                                        <a href="javascript:;"><img src="/images/video/3.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">琅琊榜</a></span>
+                                    </div>
+                                    <div class="likeImg">
+                                        <a href="javascript:;"><img src="/images/video/4.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">柳暗花明</a></span>
+                                    </div>
+                                    <div class="likeImg">
+                                        <a href="javascript:;"><img src="/images/video/5.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">大闹天宫</a></span>
+                                    </div>
+                                    <div class="likeImg">
+                                        <a href="javascript:;"><img src="/images/video/6.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">火影忍者</a></span>
+                                    </div>
+                                    <div class="likeImg">
+                                        <a href="javascript:;"><img src="/images/video/7.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">神盾局特工第二季</a></span>
+                                    </div>
+                                    <div class="likeImg">
+                                        <a href="javascript:;"><img src="/images/video/8.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">天才眼镜狗</a></span>
+                                    </div>
+                                    <div class="likeImg">
+                                        <a href="javascript:;"><img src="/images/video/9.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">快乐大本营</a></span>
+                                    </div>
+                                    <div class="likeImg">
+                                        <a href="javascript:;"><img src="/images/video/10.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">复仇者联盟</a></span>
+                                    </div>
+                                    <div class="likeImg">
+                                        <a href="javascript:;"><img src="/images/video/11.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">花千骨</a></span>
+                                    </div>
+                                    <div class="likeImg">
+                                        <a href="javascript:;"><img src="/images/video/12.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">偶像来了</a></span>
+                                    </div>
+                                    <div class="likeImg">
+                                        <a href="javascript:;"><img src="/images/video/13.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">劳动节</a></span>
+                                    </div>
+                                    <div class="likeImg">
+                                        <a href="javascript:;"><img src="/images/video/14.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">和莎莫的500天</a></span>
+                                    </div>
+                                    <div class="likeImg">
+                                        <a href="javascript:;"><img src="/images/video/15.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">Running Man</a></span>
+                                    </div>
+                                    <div class="likeImg">
+                                        <a href="javascript:;"><img src="/images/video/1.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">超能陆战队</a></span>
+                                    </div>
+                                    <div class="likeImg">
+                                        <a href="javascript:;"><img src="/images/video/2.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">火鸡总动员</a></span>
+                                    </div>
+                                    <div class="likeImg">
+                                        <a href="javascript:;"><img src="/images/video/3.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">琅琊榜</a></span>
+                                    </div>
+                                </div>
+                                <div class="varietyList innerList">
+                                    <div class="varietyImg">
+                                        <a href="javascript:;"><img src="/images/video/zy1.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">快乐大本营</a></span>
+                                    </div>
+                                    <div class="varietyImg">
+                                        <a href="javascript:;"><img src="/images/video/zy2.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">天天向上</a></span>
+                                    </div>
+                                    <div class="varietyImg">
+                                        <a href="javascript:;"><img src="/images/video/zy3.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">偶像来了</a></span>
+                                    </div>
+                                    <div class="varietyImg">
+                                        <a href="javascript:;"><img src="/images/video/zy4.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">我是大美人</a></span>
+                                    </div>
+                                    <div class="varietyImg">
+                                        <a href="javascript:;"><img src="/images/video/zy5.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">爸爸去哪儿</a></span>
+                                    </div>
+                                    <div class="varietyImg">
+                                        <a href="javascript:;"><img src="/images/video/zy6.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">Running Man</a></span>
+                                    </div>
+                                    <div class="varietyImg">
+                                        <a href="javascript:;"><img src="/images/video/zy7.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">舞动奇迹</a></span>
+                                    </div>
+                                    <div class="varietyImg">
+                                        <a href="javascript:;"><img src="/images/video/zy8.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">我去上学啦</a></span>
+                                    </div>
+                                    <div class="varietyImg">
+                                        <a href="javascript:;"><img src="/images/video/zy9.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">金星脱口秀</a></span>
+                                    </div>
+                                    <div class="varietyImg">
+                                        <a href="javascript:;"><img src="/images/video/zy10.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">你正常吗第二季</a></span>
+                                    </div>
+                                    <div class="varietyImg">
+                                        <a href="javascript:;"><img src="/images/video/zy11.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">无限挑战</a></span>
+                                    </div>
+                                    <div class="varietyImg">
+                                        <a href="javascript:;"><img src="/images/video/zy12.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">笑傲江湖 第二季</a></span>
+                                    </div>
+                                    <div class="varietyImg">
+                                        <a href="javascript:;"><img src="/images/video/zy13.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">我们都爱笑第一季</a></span>
+                                    </div>
+                                    <div class="varietyImg">
+                                        <a href="javascript:;"><img src="/images/video/zy14.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">我们结婚了</a></span>
+                                    </div>
+                                    <div class="varietyImg">
+                                        <a href="javascript:;"><img src="/images/video/zy15.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">我滴歌神啊</a></span>
+                                    </div>
+                                    <div class="varietyImg">
+                                        <a href="javascript:;"><img src="/images/video/zy1.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">快乐大本营</a></span>
+                                    </div>
+                                    <div class="varietyImg">
+                                        <a href="javascript:;"><img src="/images/video/zy2.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">天天向上</a></span>
+                                    </div>
+                                    <div class="varietyImg">
+                                        <a href="javascript:;"><img src="/images/video/zy3.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">偶像来了</a></span>
+                                    </div>
+                                </div>
+                                <div class="TVshowList innerList">
+                                    <div class="TVshowImg">
+                                        <a href="javascript:;"><img src="/images/video/tv1.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">神盾局特工第二季</a></span>
+                                    </div>
+                                    <div class="TVshowImg">
+                                        <a href="javascript:;"><img src="/images/video/tv2.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">闪电侠</a></span>
+                                    </div>
+                                    <div class="TVshowImg">
+                                        <a href="javascript:;"><img src="/images/video/tv3.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">琅琊榜</a></span>
+                                    </div>
+                                    <div class="TVshowImg">
+                                        <a href="javascript:;"><img src="/images/video/tv4.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">花千骨</a></span>
+                                    </div>
+                                    <div class="TVshowImg">
+                                        <a href="javascript:;"><img src="/images/video/tv5.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">倾世皇妃</a></span>
+                                    </div>
+                                    <div class="TVshowImg">
+                                        <a href="javascript:;"><img src="/images/video/tv6.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">云中歌</a></span>
+                                    </div>
+                                    <div class="TVshowImg">
+                                        <a href="javascript:;"><img src="/images/video/tv7.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">皇城根儿</a></span>
+                                    </div>
+                                    <div class="TVshowImg">
+                                        <a href="javascript:;"><img src="/images/video/tv8.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">徒悲鸿</a></span>
+                                    </div>
+                                    <div class="TVshowImg">
+                                        <a href="javascript:;"><img src="/images/video/tv9.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">妈妈像花儿一样</a></span>
+                                    </div>
+                                    <div class="TVshowImg">
+                                        <a href="javascript:;"><img src="/images/video/tv10.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">猎鹰1949</a></span>
+                                    </div>
+                                    <div class="TVshowImg">
+                                        <a href="javascript:;"><img src="/images/video/tv11.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">快乐elife</a></span>
+                                    </div>
+                                    <div class="TVshowImg">
+                                        <a href="javascript:;"><img src="/images/video/tv12.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">明若晓溪</a></span>
+                                    </div>
+                                    <div class="TVshowImg">
+                                        <a href="javascript:;"><img src="/images/video/tv13.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">正德演义</a></span>
+                                    </div>
+                                    <div class="TVshowImg">
+                                        <a href="javascript:;"><img src="/images/video/tv14.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">新白发魔女传</a></span>
+                                    </div>
+                                    <div class="TVshowImg">
+                                        <a href="javascript:;"><img src="/images/video/tv15.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">暗黑者2</a></span>
+                                    </div>
+                                    <div class="TVshowImg">
+                                        <a href="javascript:;"><img src="/images/video/tv1.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">神盾局特工第二季</a></span>
+                                    </div>
+                                    <div class="TVshowImg">
+                                        <a href="javascript:;"><img src="/images/video/tv2.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">闪电侠</a></span>
+                                    </div>
+                                    <div class="TVshowImg">
+                                        <a href="javascript:;"><img src="/images/video/tv3.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">琅琊榜</a></span>
+                                    </div>
+                                </div>
+                                <div class="moiveList innerList">
+                                    <div class="moiveImg">
+                                        <a href="javascript:;"><img src="/images/video/moive1.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">超能陆战队</a></span>
+                                    </div>
+                                    <div class="moiveImg">
+                                        <a href="javascript:;"><img src="/images/video/moive2.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">动物总动员</a></span>
+                                    </div>
+                                    <div class="moiveImg">
+                                        <a href="javascript:;"><img src="/images/video/moive3.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">栀子花开</a></span>
+                                    </div>
+                                    <div class="moiveImg">
+                                        <a href="javascript:;"><img src="/images/video/moive4.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">柳暗花明</a></span>
+                                    </div>
+                                    <div class="moiveImg">
+                                        <a href="javascript:;"><img src="/images/video/moive5.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">劳动节</a></span>
+                                    </div>
+                                    <div class="moiveImg">
+                                        <a href="javascript:;"><img src="/images/video/moive6.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">捉妖记</a></span>
+                                    </div>
+                                    <div class="moiveImg">
+                                        <a href="javascript:;"><img src="/images/video/moive7.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">和莎莫的500天</a></span>
+                                    </div>
+                                    <div class="moiveImg">
+                                        <a href="javascript:;"><img src="/images/video/moive8.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">神偷奶爸2</a></span>
+                                    </div>
+                                    <div class="moiveImg">
+                                        <a href="javascript:;"><img src="/images/video/moive9.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">熊出没之夺宝奇兵</a></span>
+                                    </div>
+                                    <div class="moiveImg">
+                                        <a href="javascript:;"><img src="/images/video/moive10.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">火鸡总动员</a></span>
+                                    </div>
+                                    <div class="moiveImg">
+                                        <a href="javascript:;"><img src="/images/video/moive11.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">压榨</a></span>
+                                    </div>
+                                    <div class="moiveImg">
+                                        <a href="javascript:;"><img src="/images/video/moive12.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">不眠之夜</a></span>
+                                    </div>
+                                    <div class="moiveImg">
+                                        <a href="javascript:;"><img src="/images/video/moive13.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">复仇者联盟</a></span>
+                                    </div>
+                                    <div class="moiveImg">
+                                        <a href="javascript:;"><img src="/images/video/moive14.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">我想当第五名</a></span>
+                                    </div>
+                                    <div class="moiveImg">
+                                        <a href="javascript:;"><img src="/images/video/moive15.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">滚蛋吧！肿瘤君</a></span>
+                                    </div>
+                                    <div class="moiveImg">
+                                        <a href="javascript:;"><img src="/images/video/moive1.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">超能陆战队</a></span>
+                                    </div>
+                                    <div class="moiveImg">
+                                        <a href="javascript:;"><img src="/images/video/moive2.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">动物总动员</a></span>
+                                    </div>
+                                    <div class="moiveImg">
+                                        <a href="javascript:;"><img src="/images/video/moive3.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">栀子花开</a></span>
+                                    </div>
+                                </div>
+                                <div class="comicList innerList">
+                                    <div class="comicImg">
+                                        <a href="javascript:;"><img src="/images/video/zy1.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">终极蜘蛛侠第一季</a></span>
+                                    </div>
+                                    <div class="comicImg">
+                                        <a href="javascript:;"><img src="/images/video/zy2.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">秦时明月之君临天下</a></span>
+                                    </div>
+                                    <div class="comicImg">
+                                        <a href="javascript:;"><img src="/images/video/zy3.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">火影忍者</a></span>
+                                    </div>
+                                    <div class="comicImg">
+                                        <a href="javascript:;"><img src="/images/video/zy4.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">米老鼠新传第一季</a></span>
+                                    </div>
+                                    <div class="comicImg">
+                                        <a href="javascript:;"><img src="/images/video/zy5.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">妖精的尾巴</a></span>
+                                    </div>
+                                    <div class="comicImg">
+                                        <a href="javascript:;"><img src="/images/video/zy6.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">银魂</a></span>
+                                    </div>
+                                    <div class="comicImg">
+                                        <a href="javascript:;"><img src="/images/video/zy7.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">米老鼠群星会</a></span>
+                                    </div>
+                                    <div class="comicImg">
+                                        <a href="javascript:;"><img src="/images/video/zy8.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">航海王</a></span>
+                                    </div>
+                                    <div class="comicImg">
+                                        <a href="javascript:;"><img src="/images/video/zy9.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">爱探险的哆啦</a></span>
+                                    </div>
+                                    <div class="comicImg">
+                                        <a href="javascript:;"><img src="/images/video/zy10.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">辛普森一家第24季</a></span>
+                                    </div>
+                                    <div class="comicImg">
+                                        <a href="javascript:;"><img src="/images/video/zy11.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">三千里寻母记</a></span>
+                                    </div>
+                                    <div class="comicImg">
+                                        <a href="javascript:;"><img src="/images/video/zy12.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">差啊二中 第二季</a></span>
+                                    </div>
+                                    <div class="comicImg">
+                                        <a href="javascript:;"><img src="/images/video/zy13.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">越策越开心</a></span>
+                                    </div>
+                                    <div class="comicImg">
+                                        <a href="javascript:;"><img src="/images/video/zy14.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">米奇妙妙屋</a></span>
+                                    </div>
+                                    <div class="comicImg">
+                                        <a href="javascript:;"><img src="/images/video/zy15.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">妄想学生会 第二季</a></span>
+                                    </div>
+                                    <div class="comicImg">
+                                        <a href="javascript:;"><img src="/images/video/zy1.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">终极蜘蛛侠第一季</a></span>
+                                    </div>
+                                    <div class="comicImg">
+                                        <a href="javascript:;"><img src="/images/video/zy2.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">秦时明月之君临天下</a></span>
+                                    </div>
+                                    <div class="comicImg">
+                                        <a href="javascript:;"><img src="/images/video/zy3.jpg" alt=""></a>
+                                        <span><a href="javascript:;" class="likeTitle">火影忍者</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="videoBand">
+                            <div class="likeBand innerBand onBand">
+                                <p><i>1</i><a href="javascript:;">独家：Baby面部检查全过程视频曝光</a><span>2139778</span></p>
+                                <p><i>2</i><a href="javascript:;">Baby面部鉴定报告出炉：无任何刀口</a><span>1599581</span></p>
+                                <p><i>3</i><a href="javascript:;">山西芮城3人盗女尸配阴婚 1具尸体卖25000元</a><span>965746</span></p>
+                                <p><i>4</i><a href="javascript:;">Baby素颜赶赴医院做面部鉴定 力证未整容</a><span>703364</span></p>
+                                <p><i>5</i><a href="javascript:;">黄晓明绝密婚照曝光 为Baby穿水晶婚鞋啃金镯子</a><span>554810</span></p>
+                                <p><i>6</i><a href="javascript:;">独家策划：《琅琊榜》大结局梅长苏生死未卜</a><span>552249</span></p>
+                                <p><i>7</i><a href="javascript:;">UFO粉丝称在火星上发现巨大佛像</a><span>245993</span></p>
+                                <p><i>8</i><a href="javascript:;">市民家中发现清代金砖 专家:或为皇家专供</a><span>205523</span></p>
+                                <p><i>9</i><a href="javascript:;">陈赫前妻从头改变形象 披肩长发变粉色短发</a><span>197887</span></p>
+                            </div>
+                            <div class="varietyBand innerBand">
+                                <p><i>1</i><a href="javascript:;">老爸老妈看我的</a><span>6.3</span></p>
+                                <p><i>2</i><a href="javascript:;">明星家族的2天1夜</a><span>5.9</span></p>
+                                <p><i>3</i><a href="javascript:;">康熙来了</a><span>9.7</span></p>
+                                <p><i>4</i><a href="javascript:;">百变大咖秀</a><span>7.4</span></p>
+                                <p><i>5</i><a href="javascript:;">为她而战</a><span>8.0</span></p>
+                                <p><i>6</i><a href="javascript:;">变形计</a><span>6.2</span></p>
+                                <p><i>7</i><a href="javascript:;">烈火雄心</a><span>6.4</span></p>
+                                <p><i>8</i><a href="javascript:;">名声大震</a><span>5.2</span></p>
+                                <p><i>9</i><a href="javascript:;">中国好声音第四季</a><span>6.1</span></p>
+                            </div>
+                            <div class="TVplayBand innerBand">
+                                <p><i>1</i><a href="javascript:;">奇境传说</a><span>7.3</span></p>
+                                <p><i>2</i><a href="javascript:;">犯罪心理第十季</a><span>8.9</span></p>
+                                <p><i>3</i><a href="javascript:;">调皮王妃</a><span>7.1</span></p>
+                                <p><i>4</i><a href="javascript:;">四十九日·祭</a><span>6.7</span></p>
+                                <p><i>5</i><a href="javascript:;">杰茜驾到</a><span>5.8</span></p>
+                                <p><i>6</i><a href="javascript:;">三国演义</a><span>6.2</span></p>
+                                <p><i>7</i><a href="javascript:;">懂小姐</a><span>5.6</span></p>
+                                <p><i>8</i><a href="javascript:;">校园恰恰恰</a><span>6.9</span></p>
+                                <p><i>9</i><a href="javascript:;">伪装者</a><span>9.1</span></p>
+                            </div>
+                            <div class="moiveBand innerBand">
+                                <p><i>1</i><a href="javascript:;">粮食</a><span>7.9</span></p>
+                                <p><i>2</i><a href="javascript:;">明西游记之大闹天宫</a><span>6.9</span></p>
+                                <p><i>3</i><a href="javascript:;">煎饼侠</a><span>9.1</span></p>
+                                <p><i>4</i><a href="javascript:;">耕云播雨</a><span>7.3</span></p>
+                                <p><i>5</i><a href="javascript:;">教会</a><span>8.8</span></p>
+                                <p><i>6</i><a href="javascript:;">道士下山</a><span>5.1</span></p>
+                                <p><i>7</i><a href="javascript:;">快乐奔跑</a><span>5.3</span></p>
+                                <p><i>8</i><a href="javascript:;">钢铁侠2</a><span>7.0</span></p>
+                                <p><i>9</i><a href="javascript:;">战狼</a><span>7.1</span></p>
+                            </div>
+                            <div class="comicBand innerBand">
+                                <p><i>1</i><a href="javascript:;">下流梗不存在的灰暗世界</a><span>9.1</span></p>
+                                <p><i>2</i><a href="javascript:;">火影忍者疾风传之梦中人之战</a><span>9.4</span></p>
+                                <p><i>3</i><a href="javascript:;">李洛克的青春全力忍传 cartoon</a><span>8.5</span></p>
+                                <p><i>4</i><a href="javascript:;">名侦探柯南</a><span>9.9</span></p>
+                                <p><i>5</i><a href="javascript:;">复仇者联盟第二季</a><span>8.0</span></p>
+                                <p><i>6</i><a href="javascript:;">超级英雄联盟复仇者</a><span>6.9</span></p>
+                                <p><i>7</i><a href="javascript:;">熊出没之冬日乐翻天</a><span>5.4</span></p>
+                                <p><i>8</i><a href="javascript:;">烈火之炎</a><span>5.2</span></p>
+                                <p><i>9</i><a href="javascript:;">复仇者集结第二季</a><span>6.7</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </article>
+        <footer>
+            <a href="javascript:;">设为首页</a>
+            <span>©2015 Baidu </span>
+            <a href="javascript:;">使用百度前必读</a>
+            <a href="javascript:;">意见反馈</a>
+            <span>京ICP证030173号</span>
+            <img src="/images/copy_rignt_24.png" alt="" />
+        </footer>
+    </div>
+
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    
+    <!-- build:js(.) scripts/plugins.js -->
+    <script src="/bower_components/bootstrap/js/affix.js"></script>
+    <script src="/bower_components/bootstrap/js/alert.js"></script>
+    <script src="/bower_components/bootstrap/js/dropdown.js"></script>
+    <script src="/bower_components/bootstrap/js/tooltip.js"></script>
+    <script src="/bower_components/bootstrap/js/modal.js"></script>
+    <script src="/bower_components/bootstrap/js/transition.js"></script>
+    <script src="/bower_components/bootstrap/js/button.js"></script>
+    <script src="/bower_components/bootstrap/js/popover.js"></script>
+    <script src="/bower_components/bootstrap/js/carousel.js"></script>
+    <script src="/bower_components/bootstrap/js/scrollspy.js"></script>
+    <script src="/bower_components/bootstrap/js/collapse.js"></script>
+    <script src="/bower_components/bootstrap/js/tab.js"></script>
+    <!-- endbuild -->
+    
+
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='https://www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+  </body>
+</html>
