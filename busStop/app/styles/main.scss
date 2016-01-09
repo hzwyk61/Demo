@@ -1,0 +1,174 @@
+/*通用样式*/
+
+html {
+    font-family: "微软雅黑";
+}
+
+h1,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: inline-block;
+}
+
+
+/*占位符*/
+
+%floatLeft {
+    float: left;
+}
+
+%fontWeight {
+    font-weight: bold;
+    font-family: initial;
+}
+
+%fullHeight {
+    height: 100%;
+}
+
+
+/*主体样式*/
+
+.container {
+    @extend %fullHeight;
+    width: 800px;
+    margin: 10px auto;
+    border: 2px solid #e4e4e4;
+    cursor: pointer;
+    // 站牌名称
+    .thisStop {
+        width: 800px;
+        height: 150px;
+        text-align: center;
+        color: green;
+        background-color: rgb(215, 215, 215);
+        h1 {
+            letter-spacing: 8px;
+            line-height: 120px;
+            font-size: 60px;
+        }
+        p {
+            @extend %fontWeight;
+            margin-top: -20px;
+            font-size: 30px;
+            font-family: inherit;
+        }
+    }
+    .brand {
+        width: 800px;
+        height: 165px;
+        border-top: 10px solid green;
+        // 每路车信息
+        .busInfo {
+            @extend %floatLeft;
+            @extend %fullHeight;
+            width: 200px;
+            background-color: #1C541C;
+            .company {
+                @extend %floatLeft;
+                @extend %fontWeight;
+                display: inline-block;
+                margin: 15px 10px 5px 15px;
+                width: 45px;
+                color: greenyellow;
+                letter-spacing: 3px;
+                width: 50px;
+                font-size: 15px\9;
+            }
+            .number {
+                font-size: 50px;
+                font-weight: bolder;
+                color: white;
+            }
+            .nextStop {
+                font-size: 20px;
+                font-weight: bold;
+                color: red;
+                margin: 0 0 0 15px;
+            }
+            ul {
+                li {
+                    @extend %floatLeft;
+                    @extend %fontWeight;
+                    font-size: 12px;
+                    color: greenyellow;
+                    margin: 5px 0 0 10px;
+                    width: 90px;
+                }
+            }
+            .termini {
+                @extend %floatLeft;
+                margin: 5px 0 0 15px;
+                color: red;
+                font-weight: bold;
+                font-size: 16px;
+                float: left
+            }
+        }
+        // 每路车站表
+        .stationList {
+            @extend %floatLeft;
+            @extend %fullHeight;
+            position: relative;
+            width: 600px;
+            background-color: greenyellow;
+            ul {
+                list-style: none;
+                height: 80%;
+                li {
+                    @extend %floatLeft;
+                    @extend %fontWeight;
+                    @extend %fullHeight;
+                    display: inline-block;
+                    font-size: 14px;
+                    color: darkgreen;
+                    margin-top: 5px;
+                }
+                .red {
+                    color: red;
+                }
+            }
+            .No137 li,
+            .No239 li {
+                width: 15px;
+                margin-left: 10px;
+            }
+            .No229 li {
+                width: 10px;
+                margin-left: 11px;
+            }
+            .arrow {
+                /*箭头*/
+                span {
+                    position: absolute;
+                    bottom: 10px;
+                    left: 11px;
+                    display: block;
+                    width: 555px;
+                    height: 6px;
+                    background-color: red;
+                }
+                i {
+                    display: block;
+                    position: absolute;
+                    width: 0;
+                    height: 0;
+                    border-top: 10px solid transparent;
+                    border-left: 30px solid red;
+                    border-bottom: 10px solid transparent;
+                    right: 8px;
+                    bottom: 3px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,126 @@
+@charset "UTF-8";
+/*通用样式*/
+html {
+  font-family: "微软雅黑"; }
+
+h1,
+ul,
+li {
+  margin: 0;
+  padding: 0; }
+
+ul {
+  list-style: none; }
+
+li {
+  display: inline-block; }
+
+/*占位符*/
+.container .brand .busInfo, .container .brand .busInfo .company, .container .brand .busInfo ul li, .container .brand .busInfo .termini, .container .brand .stationList, .container .brand .stationList ul li {
+  float: left; }
+
+.container .thisStop p, .container .brand .busInfo .company, .container .brand .busInfo ul li, .container .brand .stationList ul li {
+  font-weight: bold;
+  font-family: initial; }
+
+.container, .container .brand .busInfo, .container .brand .stationList, .container .brand .stationList ul li {
+  height: 100%; }
+
+/*主体样式*/
+.container {
+  width: 800px;
+  margin: 10px auto;
+  border: 2px solid #e4e4e4;
+  cursor: pointer; }
+  .container .thisStop {
+    width: 800px;
+    height: 150px;
+    text-align: center;
+    color: green;
+    background-color: #d7d7d7; }
+    .container .thisStop h1 {
+      letter-spacing: 8px;
+      line-height: 120px;
+      font-size: 60px; }
+    .container .thisStop p {
+      margin-top: -20px;
+      font-size: 30px;
+      font-family: inherit; }
+  .container .brand {
+    width: 800px;
+    height: 165px;
+    border-top: 10px solid green; }
+    .container .brand .busInfo {
+      width: 200px;
+      background-color: #1C541C; }
+      .container .brand .busInfo .company {
+        display: inline-block;
+        margin: 15px 10px 5px 15px;
+        width: 45px;
+        color: greenyellow;
+        letter-spacing: 3px;
+        width: 50px;
+        font-size: 15px\9; }
+      .container .brand .busInfo .number {
+        font-size: 50px;
+        font-weight: bolder;
+        color: white; }
+      .container .brand .busInfo .nextStop {
+        font-size: 20px;
+        font-weight: bold;
+        color: red;
+        margin: 0 0 0 15px; }
+      .container .brand .busInfo ul li {
+        font-size: 12px;
+        color: greenyellow;
+        margin: 5px 0 0 10px;
+        width: 90px; }
+      .container .brand .busInfo .termini {
+        margin: 5px 0 0 15px;
+        color: red;
+        font-weight: bold;
+        font-size: 16px;
+        float: left; }
+    .container .brand .stationList {
+      position: relative;
+      width: 600px;
+      background-color: greenyellow; }
+      .container .brand .stationList ul {
+        list-style: none;
+        height: 80%; }
+        .container .brand .stationList ul li {
+          display: inline-block;
+          font-size: 14px;
+          color: darkgreen;
+          margin-top: 5px; }
+        .container .brand .stationList ul .red {
+          color: red; }
+      .container .brand .stationList .No137 li,
+      .container .brand .stationList .No239 li {
+        width: 15px;
+        margin-left: 10px; }
+      .container .brand .stationList .No229 li {
+        width: 10px;
+        margin-left: 11px; }
+      .container .brand .stationList .arrow {
+        /*箭头*/ }
+        .container .brand .stationList .arrow span {
+          position: absolute;
+          bottom: 10px;
+          left: 11px;
+          display: block;
+          width: 555px;
+          height: 6px;
+          background-color: red; }
+        .container .brand .stationList .arrow i {
+          display: block;
+          position: absolute;
+          width: 0;
+          height: 0;
+          border-top: 10px solid transparent;
+          border-left: 30px solid red;
+          border-bottom: 10px solid transparent;
+          right: 8px;
+          bottom: 3px; }
+
+/*# sourceMappingURL=main.css.map */
