@@ -1,0 +1,313 @@
+.container {
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -158px;
+    margin-left: -158px;
+    animation: rotate 2s infinite;
+    -webkit-animation: rotate 2s infinite linear;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+   
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+@-webkit-keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.squareTop {
+    width: 100px;
+    height: 100px;
+    background-color: orangered;
+    box-shadow: 0 0 10px 1px red;
+    display: inline-block;
+    margin-bottom: 3px;
+    animation: animTop 4s infinite;
+    animation-timing-function: easy-in-out;
+    -webkit-animation: animTop 4s infinite;
+    -webkit-animation-timing-function: easy-in-out;
+}
+
+@keyframes animTop {
+    0% {
+        background-color: orangered;
+        box-shadow: 0 0 10px 1px red;
+    }
+    25% {
+        background-color: greenyellow;
+        box-shadow: 0 0 10px 1px lawngreen;
+    }
+    50% {
+        background-color: yellow;
+        box-shadow: 0 0 10px 1px gold;
+    }
+    75% {
+        background-color: dodgerblue;
+        box-shadow: 0 0 10px 1px rgba(0, 0, 255, 0.80);
+    }
+    100% {
+        background-color: orangered;
+        box-shadow: 0 0 10px 1px red;
+    }
+}
+
+@-webkit-keyframes animTop {
+    0% {
+        background-color: orangered;
+        box-shadow: 0 0 10px 1px red;
+    }
+    25% {
+        background-color: greenyellow;
+        box-shadow: 0 0 10px 1px lawngreen;
+    }
+    50% {
+        background-color: yellow;
+        box-shadow: 0 0 10px 1px gold;
+    }
+    75% {
+        background-color: dodgerblue;
+        box-shadow: 0 0 10px 1px rgba(0, 0, 255, 0.80);
+    }
+    100% {
+        background-color: orangered;
+        box-shadow: 0 0 10px 1px red;
+    }
+}
+
+.squareLeft {
+    width: 100px;
+    height: 100px;
+    background-color: greenyellow;
+    box-shadow: 0 0 10px 1px lawngreen;
+    display: inline-block;
+    animation: animLeft 4s infinite;
+    animation-timing-function: easy-in-out;
+    -webkit-animation: animLeft 4s infinite;
+    -webkit-animation-timing-function: easy-in-out;
+}
+
+@keyframes animLeft {
+    0% {
+        background-color: greenyellow;
+        box-shadow: 0 0 10px 1px lawngreen;
+    }
+    25% {
+        background-color: yellow;
+        box-shadow: 0 0 10px 1px gold;
+    }
+    50% {
+        background-color: dodgerblue;
+        box-shadow: 0 0 10px 1px rgba(0, 0, 255, 0.80);
+    }
+    75% {
+        background-color: orangered;
+        box-shadow: 0 0 10px 1px red;
+    }
+    100% {
+        background-color: greenyellow;
+        box-shadow: 0 0 10px 1px lawngreen;
+    }
+}
+
+@-webkit-keyframes-animLeft {
+    0% {
+        background-color: greenyellow;
+        box-shadow: 0 0 10px 1px lawngreen;
+    }
+    25% {
+        background-color: yellow;
+        box-shadow: 0 0 10px 1px gold;
+    }
+    50% {
+        background-color: dodgerblue;
+        box-shadow: 0 0 10px 1px rgba(0, 0, 255, 0.80);
+    }
+    75% {
+        background-color: orangered;
+        box-shadow: 0 0 10px 1px red;
+    }
+    100% {
+        background-color: greenyellow;
+        box-shadow: 0 0 10px 1px lawngreen;
+    }
+}
+
+.squareIcon {
+    width: 100px;
+    height: 100px;
+    background-color: slategray;
+    background-image: url("mini.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: gray;
+    box-shadow: 0 0 10px 1px dimgray;
+    display: inline-block;
+    animation: animIcon 4s infinite;
+    animation-timing-function: easy-in-out;
+    -webkit-animation: animIcon 4s infinite;
+    -webkit-animation-timing-function: easy-in-out;
+}
+
+@keyframes animIcon {
+    0% {
+        
+        opacity: 1;
+    }
+    
+    50% {
+        
+        opacity: 0;
+    }
+    
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes animIcon {
+    0% {
+        
+        opacity: 1;
+    }
+    50% {
+        
+        opacity: 0;
+    }
+    
+    100% {
+
+        opacity: 1;
+    }
+}
+
+.squareRight {
+    width: 100px;
+    height: 100px;
+    background-color: dodgerblue;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 255, 0.80);
+    display: inline-block;
+    animation: animRight 4s infinite;
+    animation-timing-function: easy-in-out;
+    -webkit-animation: animRight 4s infinite;
+    -webkit-animation-timing-function: easy-in-out;
+}
+
+@keyframes animRight {
+    0% {
+        background-color: dodgerblue;
+        box-shadow: 0 0 10px 1px rgba(0, 0, 255, 0.80);
+    }
+    25% {
+        background-color: orangered;
+        box-shadow: 0 0 10px 1px red;
+    }
+    50% {
+        background-color: greenyellow;
+        box-shadow: 0 0 10px 1px lawngreen;
+    }
+    75% {
+        background-color: yellow;
+        box-shadow: 0 0 10px 1px gold;
+    }
+    100% {
+        background-color: dodgerblue;
+        box-shadow: 0 0 10px 1px rgba(0, 0, 255, 0.80);
+    }
+}
+
+@-webkit-keyframes-animRight {
+    0% {
+        background-color: dodgerblue;
+        box-shadow: 0 0 10px 1px rgba(0, 0, 255, 0.80);
+    }
+    25% {
+        background-color: orangered;
+        box-shadow: 0 0 10px 1px red;
+    }
+    50% {
+        background-color: greenyellow;
+        box-shadow: 0 0 10px 1px lawngreen;
+    }
+    75% {
+        background-color: yellow;
+        box-shadow: 0 0 10px 1px gold;
+    }
+    100% {
+        background-color: dodgerblue;
+        box-shadow: 0 0 10px 1px rgba(0, 0, 255, 0.80);
+    }
+}
+
+.squareBottom {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    box-shadow: 0 0 10px 1px gold;
+    display: inline-block;
+    margin-top: 3px;
+    animation: animBottom 4s infinite;
+    animation-timing-function: easy-in-out;
+    -webkit-animation: animBottom 4s infinite;
+    -webkit-animation-timing-function: easy-in-out;
+}
+
+@keyframes animBottom {
+    0% {
+        background-color: yellow;
+        box-shadow: 0 0 10px 1px gold;
+    }
+    25% {
+        background-color: dodgerblue;
+        box-shadow: 0 0 10px 1px rgba(0, 0, 255, 0.80);
+    }
+    50% {
+        background-color: orangered;
+        box-shadow: 0 0 10px 1px red;
+    }
+    75% {
+        background-color: greenyellow;
+        box-shadow: 0 0 10px 1px lawngreen;
+    }
+    100% {
+        background-color: yellow;
+        box-shadow: 0 0 10px 1px gold;
+    }
+}
+
+@-webkit-keyframes-animBottom {
+    0% {
+        background-color: yellow;
+        box-shadow: 0 0 10px 1px gold;
+    }
+    25% {
+        background-color: dodgerblue;
+        box-shadow: 0 0 10px 1px rgba(0, 0, 255, 0.80);
+    }
+    50% {
+        background-color: orangered;
+        box-shadow: 0 0 10px 1px red;
+    }
+    75% {
+        background-color: greenyellow;
+        box-shadow: 0 0 10px 1px lawngreen;
+    }
+    100% {
+        background-color: yellow;
+        box-shadow: 0 0 10px 1px gold;
+    }
+}
