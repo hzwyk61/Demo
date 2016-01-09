@@ -1,0 +1,197 @@
+body,html,div,p,span {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+    font-family: "微软雅黑";
+}
+
+p {
+    font-family: "aria";
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header h1 {
+    color: deepskyblue;
+    margin: 35px 0 30px 35px;
+}
+
+.container {
+    margin: 5px auto;
+    width: 1000px;
+}
+
+.container section {
+    margin: 50px 0;
+    border-top: solid 2px #e4e4e4;
+}
+
+.container section .item {
+    margin: 30px 0 0 20px;
+}
+
+.container section .item p,
+.container section .item .content,
+.container section .item .content p,
+.container section .item .content .side p {
+    margin: 0 0 0 20px;
+}
+
+.container section .item img {
+    margin: 10px 0 10px 40px;
+}
+
+.container section .item a {
+    color: deepskyblue;
+}
+
+.container section .item .content ul {
+    list-style-type: circle;
+}
+
+.container section .codeColor {
+    color: #29BD29;
+}
+
+.sidebox {
+    width: 120px;
+    min-height: 50px;
+    position: fixed;
+    background-color: rgb(238, 238, 238);
+    border-radius: 5px;
+    box-shadow: 0px 1px 6px 1px rgb(156, 156, 156);
+    top: 100px;
+    right: 50px;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.sidebox .list {
+    display: block;
+    box-shadow: 0px 1px 6px 0px rgb(156, 156, 156);
+    padding-bottom: 4px;
+}
+
+.sidebox .list:hover .ul {
+    display: block;
+}
+
+.sidebox .ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
+    display: block;
+    z-index: -1;
+    position: relative;
+}
+
+/*@-webkit-keyframes shrink {
+    from {
+        height: 84px;
+    }
+    to {
+        height: 1px;
+    }
+}
+
+@-ms-keyframes shrink {
+    from {
+        height: 84px;
+    }
+    to {
+        height: 1px;
+    }
+}
+
+@-o-keyframes shrink {
+    from {
+        height: 84px;
+    }
+    to {
+        height: 1px;
+    }
+}
+
+@-moz-keyframes shrink {
+    from {
+        height: 84px;
+    }
+    to {
+        height: 1px;
+    }
+}
+
+@keyframes shrink {
+    from {
+        height: 84px;
+    }
+    to {
+        height: 1px;
+    }
+}
+
+@-webkit-keyframes spread {
+    from {
+        height: 1px;
+    }
+    to {
+        height: 84px;
+    }
+}
+
+@-ms-keyframes spread {
+    from {
+        height: 1px;
+    }
+    to {
+        height: 84px;
+    }
+}
+
+@-o-keyframes spread {
+    from {
+        height: 1px;
+    }
+    to {
+        height: 84px;
+    }
+}
+
+@-moz-keyframes spread {
+    from {
+        height: 1px;
+    }
+    to {
+        height: 84px;
+    }
+}
+
+@keyframes spread {
+    from {
+        height: 1px;
+    }
+    to {
+        height: 84px;
+    }
+}
+*/
+
+.sidebox ul li:hover {
+    background-color: deepskyblue;
+    color: #fff;
+}
+
+.sidebox .reTop {
+    display: block;
+    padding-bottom: 3px;
+    box-shadow: 0px -1px 6px 0px rgb(156, 156, 156);
+    background: deepskyblue;
+    color: #fff;
+    border-radius: 0 0 5px 5px;
+}

@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced interview</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>前端开发高级面试整理</h1>
+    </header>
+    <div class="container" id="container">
+        <section>
+            <h2><a name="partOne">HTML部分</a></h2>
+            <div class="item">
+                <h3>1.position的值， relative和absolute分别是相对于谁进行定位的？</h3>
+                <div class="content">
+                    <ul>
+                        <li>absolute :生成绝对定位的元素， 相对于最近一级的 定位不是 static 的父元素来进行定位。</li>
+                        <li>fixed （老IE不支持）生成绝对定位的元素，相对于浏览器窗口进行定位。</li>
+                        <li>relative 生成相对定位的元素，相对于其在普通流中的位置进行定位。</li>
+                        <li>static 默认值。没有定位，元素出现在正常的流中</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item">
+                <h3>2.说说对语义化的理解</h3>
+                <div class="content">
+                    <ol>
+                        <li>去掉或者丢失样式的时候能够让页面呈现出清晰的结构</li>
+                        <li>有利于SEO：和搜索引擎建立良好沟通，有助于爬虫抓取更多的有效信息：爬虫依赖于标签来确定上下文和各个关键字的权重</li>
+                        <li>方便其他设备解析（如屏幕阅读器、盲人阅读器、移动设备）以意义的方式来渲染网页</li>
+                        <li>便于团队开发和维护，语义化更具可读性，是下一步吧网页的重要动向，遵循W3C标准的团队都遵循这个标准，可以减少差异化</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="item">
+                <h3>3.Doctype作用? 严格模式与混杂模式如何区分？它们有何意义?</h3>
+                <div class="content">
+                    <ol>
+                        <li><span class="codeColor">&lt;!DOCTYPE&gt;</span> 声明位于文档中的最前面，处于 <span class="codeColor">&lt;html&gt;</span> 标签之前。告知浏览器以何种模式来渲染文档</li>
+                        <li>严格模式的排版和 JS 运作模式是 以该浏览器支持的最高标准运行</li>
+                        <li>在混杂模式中，页面以宽松的向后兼容的方式显示。模拟老式浏览器的行为以防止站点无法工作</li>
+                        <li>DOCTYPE不存在或格式不正确会导致文档以混杂模式呈现</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="item">
+                <h3>4.你知道多少种Doctype文档类型</h3>
+                <div class="content">
+                    <ol>
+                        <li>HTML 4.01 规定了三种文档类型：Strict、Transitional 以及 Frameset。</li>
+                        <li>XHTML 1.0 规定了三种 XML 文档类型：Strict、Transitional 以及 Frameset。</li>
+                        <li>Standards （标准）模式（也就是严格呈现模式）用于呈现遵循最新标准的网页，而 Quirks （包容）模式（也就是松散呈现模式或者兼容模式）用于呈现为传统浏览器而设计的网页。
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="item">
+                <h3>5.HTML与XHTML二者有什么区别</h3>
+                <div class="content">
+                    <ol>
+                        <li>所有的标记都必须要有一个相应的结束标记</li>
+                        <li>所有标签的元素和属性的名字都必须使用小写</li>
+                        <li>所有的XML标记都必须合理嵌套</li>
+                        <li>所有的属性必须用引号""括起来</li>
+                        <li>把所有&lt;和&amp;特殊符号用编码表示</li>
+                        <li>给所有属性赋一个值</li>
+                        <li>不要在注释内容中使“--”</li>
+                        <li>图片必须有说明文字</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="item">
+                <h3>6.<span class="codeColor">&lt;strong&gt;</span>，<span class="codeColor">&lt;em&gt;</span>和<span class="codeColor">&lt;b&gt;</span>，<span class="codeColor">&lt;i&gt;</span>标签</h3>
+                <div class="content">
+                    <p> <span class="codeColor">&lt;strong&gt;</span>标签和<span class="codeColor">&lt;em&gt;</span>标签一样，用于强调文本，但它强调的程度更强一些。</p>
+                    <p>em 是斜体强调标签，更强烈强调，表示内容的强调点。相当于html元素中的 <span class="codeColor">&lt;i&gt;...&lt;/i&gt;</span></p>
+                    <p><span class="codeColor">&lt;b&gt; ,&lt;i&gt;</span>是视觉要素，分别表示无意义的加粗，无意义的斜体。</p>
+                    <p>em 和 strong 是表达要素(phrase elements)</p>
+                </div>
+            </div>
+            <div class="item">
+                <h3>7.attribute和property的区别是什么</h3>
+                <div class="content">
+                    <p>attribute是dom元素在文档中作为html标签拥有的属性； property就是dom元素在js中作为对象拥有的属性。
+                    </p>
+                    <p>对于html的标准属性来说，attribute和property是同步的，是会自动更新的， 但是对于自定义的属性来说，他们是不同步的。
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <h3></h3>
+                <div class="content"></div>
+            </div>
+        </section>
+        <section>
+            <h2><a name="partTwo">CSS部分</a></h2>
+            <div class="item">
+                <h3>1.谈谈浮动和清除浮动</h3>
+                <div class="content">
+                    <p>浮动的框可以向左或向右移动，直到他的外边缘碰到包含框或另一个浮动框的边框为止。由于浮动框不在文档的普通流中，所以文档的普通流的块框表现得就像浮动框不存在一样。浮动的块框会漂浮在文档普通流的块框上。</p>
+                </div>
+            </div>
+            <div class="item">
+                <h3>2.display:none和visibility:hidden的区别？</h3>
+                <div class="content">
+                    <p>display:none 隐藏对应的元素，在文档布局中不再给它分配空间，它各边的元素会合拢，就当他从来不存在。</p>
+                    <p>visibility:hidden 隐藏对应的元素，但是在文档布局中仍保留原来的空间。</p>
+                </div>
+            </div>
+            <div class="item">
+                <h3>3.link 和@import的区别是？</h3>
+                <div class="content">
+                    <ol>
+                        <li>link属于HTML标签，而@import是CSS提供的;</li>
+                        <li>页面被加载的时，link会同时被加载，而@import引用的CSS会等到页面被加载完再加载;</li>
+                        <li>import只在IE5以上才能识别，而link是HTML标签，无兼容问题;</li>
+                        <li>link方式的样式的权重 高于@import的权重.</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="item">
+                <h3>4.position:absolute和float属性的异同</h3>
+                <div class="content">
+                    <ul>
+                        <li>共同点：对内联元素设置float和absolute属性，可以让元素脱离文档流，并且可以设置其宽高。</li>
+                        <li>不同点：float仍会占据位置，position会覆盖文档流中的其他元素。</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item">
+                <h3>5.介绍一下box-sizing属性</h3>
+                <div class="content">
+                    <p>box-sizing属性主要用来控制元素的盒模型的解析模式。默认值是content-box。</p>
+                    <ul>
+                        <li>content-box：让元素维持W3C的标准盒模型。元素的宽度/高度由border + padding + content的宽度/高度决定，设置width/height属性指的是content部分的宽/高</li>
+                        <li>border-box：让元素维持IE传统盒模型（IE6以下版本和IE6~7的怪异模式）。设置width/height属性指的是border + padding + content</li>
+                    </ul>
+                    <p>标准浏览器下，按照W3C规范对盒模型解析，一旦修改了元素的边框或内距，就会影响元素的盒子尺寸，就不得不重新计算元素的盒子尺寸，从而影响整个页面的布局。</p>
+                </div>
+            </div>
+            <div class="item">
+                <h3>6.CSS优先级算法如何计算？</h3>
+                <div class="content">
+                    <p>!important &gt; id &gt; class &gt; tag</p>
+                    <p>important 比 内联优先级高,但内联比 id 要高</p>
+                </div>
+            </div>
+            <div class="item">
+                <h3>7.CSS3有哪些新特性？</h3>
+                <div class="content">
+                    <p>CSS3实现圆角（border-radius），阴影（box-shadow）， 对文字加特效（text-shadow、），线性渐变（gradient），旋转（transform）
+                    </p>
+                    <p>transform:rotate(9deg) scale(0.85,0.90) translate(0px,-30px) skew(-9deg,0deg);//旋转,缩放,定位,倾斜</p>
+                    <p>增加了更多的CSS选择器 多背景 rgba</p>
+                    <p>在CSS3中唯一引入的伪元素是::selection.</p>
+                    <p>媒体查询，多栏布局</p>
+                    <p>border-image</p>
+                </div>
+            </div>
+            <div class="item">
+                <h3>8.常见兼容性问题</h3>
+                <div class="content">
+                    <ol>
+                        <li>png24位的图片在iE6浏览器上出现背景，解决方案是做成PNG8.也可以引用一段脚本处理.</li>
+                        <li>IE6双边距bug:块属性标签float后，又有横行的margin情况下，在ie6显示margin比设置的大。</li>
+                        <li>浮动ie产生的双倍距离（IE6双边距问题：在IE6下，如果对元素设置了浮动，同时又设置了margin-left或margin-right，margin值会加倍。）解决方案是在float的标签样式控制中加入 _display:inline;将其转化为行内属性。(_这个符号只有ie6会识别)
+                        </li>
+                        <li>上下margin重合问题:ie和ff都存在，相邻的两个div的margin-left和margin-right不会重合，但是margin-top和margin-bottom却会发生重合。 解决方法，养成良好的代码编写习惯，同时采用margin-top或者同时采用margin-bottom。
+                        </li>
+                    </ol>
+                    <h4>IE hack</h4>
+                    <img src="images/iehack.png" class="codeImg">
+                </div>
+            </div>
+            <div class="item">
+                <h3>9.解释下浮动和它的工作原理？清除浮动的技巧</h3>
+                <div class="content">
+                    <p>浮动元素脱离文档流，不占据空间。浮动元素碰到包含它的边框或者浮动元素的边框停留。</p>
+                    <ol>
+                        <li>使用空标签清除浮动。
+                            <br>这种方法是在所有浮动标签后面添加一个空标签 定义css clear:both. 弊端就是增加了无意义标签。</li>
+                        <li>使用overflow。
+                            <br> 给包含浮动元素的父标签添加css属性 overflow:auto; zoom:1; zoom:1用于兼容IE6。</li>
+                        <li>使用after伪对象清除浮动。
+                            <br>该方法只适用于非IE浏览器。具体写法可参照以下示例。使用中需注意以下几点。一、该方法中必须为需要清除浮动元素的伪对象中设置 height:0，否则该元素会比实际高出若干像素；</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="item">
+                <h3>10.html5有哪些新特性</h3>
+                <div class="content">
+                    <ul>
+                        <li>HTML5 现在已经不是 SGML 的子集，主要是关于图像，位置，存储，多任务等功能的增加。</li>
+                        <li>拖拽释放(Drag and drop) API</li>
+                        <li>语义化更好的内容标签（header,nav,footer,aside,article,section）</li>
+                        <li>音频、视频API(audio,video)</li>
+                        <li>画布(Canvas) API</li>
+                        <li>地理(Geolocation) API</li>
+                        <li>本地离线存储 localStorage 长期存储数据，浏览器关闭后数据不丢失</li>
+                        <li>sessionStorage 的数据在浏览器关闭后自动删除</li>
+                        <li>表单控件，calendar、date、time、email、url、search</li>
+                        <li>新的技术webworker, websocket, Geolocation</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item">
+                <h3>11.什么是 FOUC（无样式内容闪烁）？你如何来避免 FOUC？</h3>
+                <div class="content">
+                    <p>FOUC - Flash Of Unstyled Content 文档样式闪烁</p>
+                    <pre>
+            		&lt;style type="text/css" media="all"&gt;@import "../fouc.css";&lt;/style&gt;
+            	</pre>
+                    <p>而引用CSS文件的@import就是造成这个问题的罪魁祸首。IE会先加载整个HTML文档的DOM，然后再去导入外部的CSS文件，因此，在页面DOM加载完成到CSS导入完成中间会有一段时间页面上的内容是没有样式的，这段时间的长短跟网速，电脑速度都有关系。 解决方法简单的出奇，只要在&lt;head&gt;之间加入一个&lt;link&gt;或者&lt;script&gt;元素就可以了。
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <h3>12.如何居中一个浮动元素</h3>
+                <div class="content">
+                    <p>父元素和子元素同时左浮动，然后父元素相对左移动50%，再然后子元素相对右移动50%，或者子元素相对左移动-50%也就可以了。</p>
+                    <img src="images/floatcenter.png" class="codeImg">
+                </div>
+            </div>
+            <div class="item">
+                <h3>13.css实现三栏布局，中间自适应</h3>
+                <div class="content">
+                    <h4>方法一：自身浮动法。左栏左浮动，右栏右浮动</h4>
+                    <img src="images/column1.png" class="codeImg">
+                    <h4>方法二：margin负值法</h4>
+                    <img src="images/column2.png" class="codeImg">
+                    <h4>方法三：绝对定位法。</h4>
+                    <p>左右两栏采用绝对定位，分别固定于页面的左右两侧，中间的主体栏用左右margin值撑开距离。</p>
+                    <img src="images/column3.png" class="codeImg">
+                </div>
+            </div>
+            <div class="item">
+                <h3></h3>
+                <div class="content"></div>
+            </div>
+        </section>
+        <section>
+            <h2><a name="partThree"></a>JavaScript部分</h2>
+            <div class="item">
+                <h3>1.说说你对作用域链的理解</h3>
+                <div class="content">
+                    <p>作用域链的作用是保证执行环境里有权访问的变量和函数是有序的，作用域链的变量只能向上访问，变量访问到window对象即被终止，作用域链向下访问变量是不被允许的。</p>
+                </div>
+            </div>
+            <div class="item">
+                <h3>2.onmousemove和onmouseover的区别：</h3>
+                <div class="content">
+                    <p>时间上：onmousemove事件触发后，再触发onmouseover事件。</p>
+                    <p>动作上：onmouseover只在刚进入区域时触发，onmousemove除了刚进入区域触发外，在区域内移动鼠标，也会触发</p>
+                </div>
+            </div>
+            <div class="item">
+                <h3>3.创建ajax过程</h3>
+                <div class="content">
+                    <ol>
+                        <li>创建XMLHttpRequest对象,也就是创建一个异步调用对象.</li>
+                        <li>创建一个新的HTTP请求,并指定该HTTP请求的方法、URL及验证信息.</li>
+                        <li>设置响应HTTP请求状态变化的函数.</li>
+                        <li>发送HTTP请求.</li>
+                        <li>获取异步调用返回的数据.</li>
+                        <li>使用JavaScript和DOM实现局部刷新.</li>
+                    </ol>
+                    <img src="images/ajax.png" class="codeImg">
+                    <p>详见：<a href="http://segmentfault.com/a/1190000000691919" target="_blank">JavaScript学习总结（七）Ajax和Http状态字</a></p>
+                </div>
+            </div>
+            <div class="item">
+                <h3>4. Javascript垃圾回收方法</h3>
+                <div class="content">
+                    <div class="side">
+                        <h4>标记清除（mark and sweep）</h4>
+                        <p>这是JavaScript最常见的垃圾回收方式，当变量进入执行环境的时候，比如函数中声明一个变量，垃圾回收器将其标记为“进入环境”，当变量离开环境的时候（函数执行结束）将其标记为“离开环境”。</p>
+                        <p>垃圾回收器会在运行的时候给存储在内存中的所有变量加上标记，然后去掉环境中的变量以及被环境中变量所引用的变量（闭包），在这些完成之后仍存在标记的就是要删除的变量了</p>
+                    </div>
+                    <div class="side">
+                        <h4>引用计数(reference counting)</h4>
+                        <p>在低版本IE中经常会出现内存泄露，很多时候就是因为其采用引用计数方式进行垃圾回收。引用计数的策略是跟踪记录每个值被使用的次数，当声明了一个 变量并将一个引用类型赋值给该变量的时候这个值的引用次数就加1，如果该变量的值变成了另外一个，则这个值得引用次数减1，当这个值的引用次数变为0的时 候，说明没有变量在使用，这个值没法被访问了，因此可以将其占用的空间回收，这样垃圾回收器会在运行的时候清理掉引用次数为0的值占用的空间。</p>
+                        <p>在IE中虽然JavaScript对象通过标记清除的方式进行垃圾回收，但BOM与DOM对象却是通过引用计数回收垃圾的， 也就是说只要涉及BOM及DOM就会出现循环引用问题。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <h3>5.你觉得jQuery或zepto源码有哪些写的好的地方</h3>
+                <div class="content">
+                    <p>jquery源码封装在一个匿名函数的自执行环境中，有助于防止变量的全局污染，然后通过传入window对象参数，可以使window对象作为局部变量使用，好处是当jquery中访问window对象的时候，就不用将作用域链退回到顶层作用域了，从而可以更快的访问window对象。同样，传入undefined参数，可以缩短查找undefined时的作用域链。</p>
+                    <img src="images/jquery.png" class="codeImg">
+                    <p>jquery将一些原型属性和方法封装在了jquery.prototype中，为了缩短名称，又赋值给了jquery.fn，这是很形象的写法。 有一些数组或对象的方法经常能使用到，应将它们保存为局部变量以提高访问速度。 将全局对象window作为参数传入，则可以使之在匿名函数内部作为局部变量访问，提供访问速度。 jquery实现的链式调用可以节约代码，所返回的都是同一个对象，可以提高代码效率。
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <h3>6.ES6的了解</h3>
+                <div class="content">
+                    <p>新增模板字符串（为JavaScript提供了简单的字符串插值功能）、箭头函数（操作符左边为输入的参数，而右边则是进行的操作以及返回的值Inputs=>outputs。）、for-of（用来遍历数据—例如数组中的值。）arguments对象可被不定参数和默认参数完美代替。ES6将promise对象纳入规范，提供了原生的Promise对象。增加了let和const命令，用来声明变量。增加了块级作用域。let命令实际上就增加了块级作用域。ES6规定，var命令和function命令声明的全局变量，属于全局对象的属性；let命令、const命令、class命令声明的全局变量，不属于全局对象的属性。还有就是引入module模块的概念。</p>
+                </div>
+            </div>
+            <div class="item">
+                <h3>7.js继承方式及其优缺点</h3>
+                <div class="content">
+                    <h4>原型链继承的缺点</h4>
+                    <span>一是字面量重写原型会中断关系，使用引用类型的原型，并且子类型还无法给超类型传递参数。</span>
+                    <h4>借用构造函数（类式继承）</h4>
+                    <span>借用构造函数虽然解决了刚才两种问题，但没有原型，则复用无从谈起。所以我们需要原型链+借用构造函数的模式，这种模式称为组合继承</span>
+                    <h4>组合式继承</h4>
+                    <span>组合式继承是比较常用的一种继承方法，其背后的思路是 使用原型链实现对原型属性和方法的继承，而通过借用构造函数来实现对实例属性的继承。这样，既通过在原型上定义方法实现了函数复用，又保证每个实例都有它自己的属性。</span>
+                </div>
+            </div>
+            <div class="item">
+                <h3>8.说说你对闭包的理解</h3>
+                <div class="content">
+                    <p>使用闭包主要是为了设计私有的方法和变量。闭包的优点是可以避免全局变量的污染，缺点是闭包会常驻内存，会增大内存使用量，使用不当很容易造成内存泄露。</p>
+                    <p>闭包有三个特性：</p>
+                    <ol>
+                        <li>函数嵌套函数</li>
+                        <li>函数内部可以引用外部的参数和变量</li>
+                        <li>参数和变量不会被垃圾回收机制回收</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="item">
+                <h3>9.DOM操作——怎样添加、移除、移动、复制、创建和查找节点。</h3>
+                <div class="content">
+                    <h4>创建新节点</h4>
+                    <ul>
+                        <li><span class="codeColor"> createDocumentFragment()</span> //创建一个DOM片段</li>
+                        <li><span class="codeColor">createElement()</span> //创建一个具体的元素</li>
+                        <li><span class="codeColor">createTextNode()</span> //创建一个文本节点</li>
+                    </ul>
+                    <h4>添加、移除、替换、插入</h4>
+                    <ul>
+                        <li><span class="codeColor">appendChild()</span></li>
+                        <li><span class="codeColor">removeChild()</span></li>
+                        <li><span class="codeColor">replaceChild()</span></li>
+                        <li><span class="codeColor">insertBefore() //并没有insertAfter()</span></li>
+                    </ul>
+                    <h4>查找</h4>
+                    <ul>
+                        <li><span class="codeColor">getElementsByTagName()</span></li>
+                        <li><span class="codeColor">getElementsByName()</span></li>
+                        <li><span class="codeColor">getElementById()  </span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item">
+                <h3>10.null和undefined的区别？</h3>
+                <div class="content">
+                    <p>null是一个表示"无"的对象，转为数值时为0；undefined是一个表示"无"的原始值，转为数值时为NaN。 当声明的变量还未被初始化时，变量的默认值为undefined。 null用来表示尚未存在的对象，常用来表示函数企图返回一个不存在的对象。
+                    </p>
+                    <p>undefined表示"缺少值"，就是此处应该有一个值，但是还没有定义。典型用法是：</p>
+                    <ol>
+                        <li>变量被声明了，但没有赋值时，就等于undefined</li>
+                        <li>调用函数时，应该提供的参数没有提供，该参数等于undefined</li>
+                        <li>对象没有赋值的属性，该属性的值为undefined</li>
+                        <li>函数没有返回值时，默认返回undefined</li>
+                    </ol>
+                    <p>null表示"没有对象"，即该处不应该有值。典型用法是：</p>
+                    <ol>
+                        <li>作为函数的参数，表示该函数的参数不是对象</li>
+                        <li>作为对象原型链的终点</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="item">
+                <h3>11.new操作符具体干了什么</h3>
+                <div class="content">
+                    <ol>
+                        <li>创建一个空对象，并且 this 变量引用该对象，同时还继承了该函数的原型</li>
+                        <li>属性和方法被加入到 this 引用的对象中</li>
+                        <li>新创建的对象由 this 所引用，并且最后隐式的返回 this</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="item">
+                <h3>12.call() 和 apply() 的区别和作用</h3>
+                <div class="content">
+                    <p>作用：动态改变某个类的某个方法的运行环境（执行上下文）。</p>
+                    <p>区别参见：<a href="http://segmentfault.com/a/1190000000660786#articleHeader15" target="_blank">JavaScript学习总结（四）function函数部分</a></p>
+                </div>
+            </div>
+            <div class="item">
+                <h3>13.哪些操作会造成内存泄漏</h3>
+                <div class="content">
+                    <p>内存泄漏指任何对象在您不再拥有或需要它之后仍然存在。 垃圾回收器定期扫描对象，并计算引用了每个对象的其他对象的数量。如果一个对象的引用数量为 0（没有其他对象引用过该对象），或对该对象的惟一引用是循环的，那么该对象的内存即可回收。 setTimeout 的第一个参数使用字符串而非函数的话，会引发内存泄漏。 闭包、控制台日志、循环（在两个对象彼此引用且彼此保留时，就会产生一个循环）
+                    </p>
+                    <p>详见：<a href="http://segmentfault.com/a/1190000000687844" target="_blank">详解js变量、作用域及内存</a></p>
+                </div>
+            </div>
+            <div class="item">
+                <h3>14.WEB应用从服务器主动推送Data到客户端有那些方式</h3>
+                <div class="content">
+                    <p>Javascript数据推送</p>
+                    <ul>
+                        <li>Commet：基于HTTP长连接的服务器推送技术</li>
+                        <li>基于WebSocket的推送方案</li>
+                        <li>SSE（Server-Send Event）：服务器推送数据新方式</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item">
+                <h3>15.javascript对象的几种创建方式</h3>
+                <div class="content">
+                    <ol>
+                        <li>工厂模式</li>
+                        <li>构造函数模式</li>
+                        <li>原型模式</li>
+                        <li>混合构造函数和原型模式</li>
+                        <li>动态原型模式</li>
+                        <li>寄生构造函数模式</li>
+                        <li>稳妥构造函数模式</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="item">
+                <h3>16.javascript继承的6种方法</h3>
+                <div class="content">
+                    <ol>
+                        <li>原型链继承</li>
+                        <li>借用构造函数继承</li>
+                        <li>组合继承(原型+借用构造)</li>
+                        <li>原型式继承</li>
+                        <li>寄生式继承</li>
+                        <li>寄生组合式继承</li>
+                    </ol>
+                    <p>详见：<a href="http://segmentfault.com/a/1190000002440502" target="_blank">JavaScript继承方式详解</a></p>
+                </div>
+            </div>
+            <div class="item">
+                <h3>17.请解释一下 JavaScript 的同源策略</h3>
+                <div class="content">
+                    <p>概念:同源策略是客户端脚本（尤其是Javascript）的重要的安全度量标准。它最早出自Netscape Navigator2.0，其目的是防止某个文档或脚本从多个不同源装载。</p>
+                    <p>这里的同源策略指的是：协议，域名，端口相同，同源策略是一种安全协议。 指一段脚本只能读取来自同一来源的窗口和文档的属性。
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <h3>18.为什么要有同源限制</h3>
+                <div class="content">
+                    <p>我们举例说明：比如一个黑客程序，他利用Iframe把真正的银行登录页面嵌到他的页面上，当你使用真实的用户名，密码登录时，他的页面就可以通过Javascript读取到你的表单中input中的内容，这样用户名，密码就轻松到手了。</p>
+                    <p>缺点： 现在网站的JS 都会进行压缩，一些文件用了严格模式，而另一些没有。这时这些本来是严格模式的文件，被 merge 后，这个串就到了文件的中间，不仅没有指示严格模式，反而在压缩后浪费了字节。</p>
+                </div>
+            </div>
+            <div class="item">
+                <h3>19.GET和POST的区别，何时使用POST？</h3>
+                <div class="content">
+                    <p>GET：一般用于信息获取，使用URL传递参数，对所发送信息的数量也有限制，一般在2000个字符</p>
+                    <p> POST：一般用于修改服务器上的资源，对所发送的信息没有限制。</p>
+                    <p> GET方式需要使用Request.QueryString来取得变量的值，而POST方式通过Request.Form来获取变量的值， 也就是说Get是通过地址栏来传值，而Post是通过提交表单来传值。
+                    </p>
+                    <p>然而，在以下情况中，请使用 POST 请求：
+                        <br> 无法使用缓存文件（更新服务器上的文件或数据库） 向服务器发送大量数据（POST 没有数据量限制） 发送包含未知字符的用户输入时，POST 比 GET 更稳定也更可靠</p>
+                </div>
+            </div>
+            <div class="item">
+                <h3>20.ajax的缺点和在IE下的问题</h3>
+                <div class="content">
+                    <h4>ajax的缺点</h4>
+                    <ol>
+                        <li>ajax不支持浏览器back按钮</li>
+                        <li>安全问题 AJAX暴露了与服务器交互的细节</li>
+                        <li>对搜索引擎的支持比较弱</li>
+                        <li>破坏了程序的异常机制</li>
+                        <li>不容易调试</li>
+                    </ol>
+                    <h4>Ajax请求的页面历史记录状态问题</h4>
+                    <p>可以通过锚点来记录状态，location.hash。让浏览器记录Ajax请求时页面状态的变化。 还可以通过HTML5的history.pushState，来实现浏览器地址栏的无刷新改变
+                    </p>
+                    <h4>IE缓存问题</h4>
+                    <p>在IE浏览器下，如果请求的方法是GET，并且请求的URL不变，那么这个请求的结果就会被缓存。解决这个问题的办法可以通过实时改变请求的URL，只要URL改变，就不会被缓存，可以通过在URL末尾添加上随机的时间戳参数('t'= + new Date().getTime()) 或者： open('GET','demo.php?rand=+Math.random()',true);
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <h3>21.js对象的深度克隆</h3>
+                <div class="content">
+                    <img src="images/jsclone.png" class="codeImg">
+                </div>
+            </div>
+            <div class="item">
+                <h3>22.js数组去重</h3>
+                <div class="content">
+                    <img src="images/array1.png" class="codeImg">
+                    <img src="images/array2.png" class="codeImg">
+                    <img src="images/array3.png" class="codeImg">
+                </div>
+            </div>
+            <div class="item">
+                <h3>23.说说你对Promise的理解</h3>
+                <div class="content">
+                    <p>Promise 对象用来进行延迟(deferred) 和异步(asynchronous ) 计算。另外， fulfilled 与 rejected 一起合称 settled。依照 Promise/A+ 的定义，Promise 有四种状态：</p>
+                    <ul>
+                        <li>pending: 初始状态, 非 fulfilled 或 rejected</li>
+                        <li>fulfilled: 成功的操作</li>
+                        <li>rejected: 失败的操作</li>
+                        <li>settled: Promise已被fulfilled或rejected，且不是pending</li>
+                    </ul>
+                    <p>构造一个 Promise，最基本的用法如下：</p>
+                    <img src="images/promise.png" class="codeImg">
+                </div>
+            </div>
+            <div class="item">
+                <h3>24.实现一个函数clone，可以对JavaScript中的5种主要的数据类型（包括Number、String、Object、Array、Boolean）进行值复制</h3>
+                <div class="content">
+                    <img src="images/clone.png" class="codeImg">
+                </div>
+            </div>
+            <div class="item">
+                <h3>25.说说严格模式的限制</h3>
+                <div class="content">
+                    <h4>严格模式主要有以下限制：</h4>
+                    <ul>
+                        <li>变量必须声明后再使用</li>
+                        <li>函数的参数不能有同名属性，否则报错</li>
+                        <li>不能使用with语句</li>
+                        <li>不能对只读属性赋值，否则报错</li>
+                        <li>不能使用前缀0表示八进制数，否则报错</li>
+                        <li>不能删除不可删除的属性，否则报错</li>
+                        <li>不能删除变量delete prop，会报错，只能删除属性delete global[prop]</li>
+                        <li>eval不会在它的外层作用域引入变量</li>
+                        <li>eval和arguments不能被重新赋值</li>
+                        <li>arguments不会自动反映函数参数的变化</li>
+                        <li>不能使用arguments.callee/arguments.caller</li>
+                        <li>禁止this指向全局对象</li>
+                        <li>不能使用fn.caller和fn.arguments获取函数调用的堆栈</li>
+                        <li>增加了保留字（比如protected、static和interface）</li>
+                    </ul>
+                    <h4>设立"严格模式"的目的，主要有以下几个：</h4>
+                    <ul>
+                        <li>消除Javascript语法的一些不合理、不严谨之处，减少一些怪异行为</li>
+                        <li>消除代码运行的一些不安全之处，保证代码运行的安全</li>
+                        <li>提高编译器效率，增加运行速度</li>
+                        <li>为未来新版本的Javascript做好铺垫</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item">
+                <h3>26.如何删除一个cookie</h3>
+                <div class="content">
+                    <h4>将时间设为当前时间往前一点</h4>
+                    <img src="images/deletecookie1.png" class="codeImg">
+                    <span>setDate()方法用于设置一个月的某一天。</span>
+                    <h4>expires的设置</h4>
+                    <img src="images/deletecookie2.png" class="codeImg">
+                </div>
+            </div>
+            <div class="item">
+                <h3>27.document.write()的用法</h3>
+                <div class="content">
+                    <p>document.write()方法可以用在两个方面：页面载入过程中用实时脚本创建页面内容，以及用延时脚本创建本窗口或新窗口的内容。</p>
+                    <p>document.write只能重绘整个页面。innerHTML可以重绘页面的一部分</p>
+                </div>
+            </div>
+            <div class="item">
+                <h3>28.编写一个方法 求一个字符串的字节长度</h3>
+                <div class="content">
+                    <p>假设：一个英文字符占用一个字节，一个中文字符占用两个字节</p>
+                    <img src="images/length.png" class="codeImg">
+                </div>
+            </div>
+            <div class="item">
+                <h3>29.js常用设计模式的实现思路，单例，工厂，代理，装饰，观察者模式等</h3>
+                <div class="content">
+                    <h4>单例：任意对象都是单例，无须特别处理</h4>
+                    <img src="images/design1.png" class="codeImg">
+                    <h4>工厂：就是同样形式参数返回不同的实例</h4>
+                    <img src="images/design2.png" class="codeImg">
+                    <h4>代理: 就是新建个类调用老类的接口,包一下</h4>
+                    <img src="images/design3.png" class="codeImg">
+                    <h4>观察者: 就是事件模式，比如按钮的onclick这样的应用</h4>
+                    <img src="images/design4.png" class="codeImg">
+                </div>
+            </div>
+            <div class="item">
+                <h3>30.请解释什么是事件代理</h3>
+                <div class="content">
+                    <p>事件代理（Event Delegation），又称之为事件委托。是 JavaScript 中常用绑定事件的常用技巧。顾名思义，“事件代理”即是把原本需要绑定的事件委托给父元素，让父元素担当事件监听的职务。事件代理的原理是DOM元素的事件冒泡。使用事件代理的好处是可以提高性能。</p>
+                </div>
+            </div>
+            <div class="item">
+                <h3></h3>
+                <div class="content"></div>
+            </div>
+        </section>
+        <section>
+            <h2><a name="partFour"></a>开放性试题</h2>
+            <div class="item">
+                <h3>1.如何解决跨域问题</h3>
+                <div class="content">
+                    <div class="side">
+                        <h4>JSONP:</h4>
+                        <p>原理是：动态插入script标签，通过script标签引入一个js文件，这个js文件载入成功后会执行我们在url参数中指定的函数，并且会把我们需要的json数据作为参数传入。</p>
+                        <p>由于同源策略的限制，XmlHttpRequest只允许请求当前源（域名、协议、端口）的资源，为了实现跨域请求，可以通过script标签实现跨域请求，然后在服务端输出JSON数据并执行回调函数，从而解决了跨域的数据请求。</p>
+                        <p>优点是兼容性好，简单易用，支持浏览器与服务器双向通信。缺点是只支持GET请求。</p>
+                        <p>JSONP:json+padding(内填充),顾名思义,就是把JSON填充到一个盒子里</p>
+                        <img src="images/JSONP.png" class="codeImg">
+                    </div>
+                    <div class="side">
+                        <h4>CORS</h4>
+                        <p>服务器端对于CORS的支持，主要就是通过设置Access-Control-Allow-Origin来进行的。如果浏览器检测到相应的设置，就可以允许Ajax进行跨域的访问。</p>
+                    </div>
+                    <div class="side">
+                        <h4>通过修改document.domain来跨子域</h4>
+                        <p>将子域和主域的document.domain设为同一个主域.前提条件：这两个域名必须属于同一个基础域名!而且所用的协议，端口都要一致，否则无法利用document.domain进行跨域</p>
+                        <p>主域相同的使用document.domain</p>
+                    </div>
+                    <div class="side">
+                        <h4>使用window.name来进行跨域</h4>
+                        <p>window对象有个name属性，该属性有个特征：即在一个窗口(window)的生命周期内,窗口载入的所有的页面都是共享一个window.name的，每个页面对window.name都有读写的权限，window.name是持久存在一个窗口载入过的所有页面中的</p>
+                    </div>
+                    <div class="side">
+                        <h4>使用HTML5中新引进的window.postMessage方法来跨域传送数据</h4>
+                        <p>还有flash、在服务器上设置代理页面等跨域方式。个人认为window.name的方法既不复杂，也能兼容到几乎所有浏览器，这真是极好的一种跨域方法。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <h3>2.XML和JSON的区别？</h3>
+                <div class="content">
+                    <ol>
+                        <li>
+                            <h4>数据体积方面</h4>
+                            <p>JSON相对于XML来讲，数据的体积小，传递的速度更快些。</p>
+                        </li>
+                        <li>
+                            <h4>数据交互方面</h4>
+                            <p>JSON与JavaScript的交互更加方便，更容易解析处理，更好的数据交互。</p>
+                        </li>
+                        <li>
+                            <h4>数据描述方面</h4>
+                            <p>JSON对数据的描述性比XML较差。</p>
+                        </li>
+                        <li>
+                            <h4>传输速度方面</h4>
+                            <p>JSON的速度要远远快于XML。</p>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="item">
+                <h3>3.谈谈你会webpack的看法</h3>
+                <div class="content">
+                    <p>WebPack 是一个模块打包工具，你可以使用WebPack管理你的模块依赖，并编绎输出模块们所需的静态文件。它能够很好地管理、打包Web开发中所用到的HTML、Javascript、CSS以及各种静态文件（图片、字体等），让开发过程更加高效。对于不同类型的资源，webpack有对应的模块加载器。webpack模块打包器会分析模块间的依赖关系，最后 生成了优化且合并后的静态资源。</p>
+                    <p>webpack是加强版的Browserify。 webpack的两大特色：
+                    </p>
+                    <ol>
+                        <li>code splitting（可以自动完成）</li>
+                        <li>loader 可以处理各种类型的静态文件，并且支持串联操作</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="item">
+                <h3>4.webpack的优势</h3>
+                <div class="content">
+                    <ul>
+                        <li>require.js的所有功能它都有。</li>
+                        <li>编绎过程更快，因为require.js会去处理不需要的文件。</li>
+                    </ul>
+                    <p>webpack 是以commonJS的形式来书写脚本滴，但对 AMD/CMD 的支持也很全面，方便旧项目进行代码迁移。</p>
+                    <p>webpack具有requireJs和browserify的功能，但仍有很多自己的新特性：</p>
+                    <ol>
+                        <li>对 CommonJS 、 AMD 、ES6的语法做了兼容</li>
+                        <li>对js、css、图片等资源文件都支持打包</li>
+                        <li>串联式模块加载器以及插件机制，让其具有更好的灵活性和扩展性，例如提供对CoffeeScript、ES6的支持</li>
+                        <li>有独立的配置文件webpack.config.js</li>
+                        <li>可以将代码切割成不同的chunk，实现按需加载，降低了初始化时间</li>
+                        <li>支持 SourceUrls 和 SourceMaps，易于调试</li>
+                        <li>具有强大的Plugin接口，大多是内部插件，使用起来比较灵活</li>
+                        <li>webpack 使用异步 IO 并具有多级缓存。这使得 webpack 很快且在增量编译上更加快</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="item">
+                <h3>5.说说TCP传输的三次握手四次挥手策略</h3>
+                <div class="content">
+                    <p>为了准确无误地把数据送达目标处，TCP协议采用了三次握手策略。用TCP协议把数据包送出去后，TCP不会对传送 后的情况置之不理，它一定会向对方确认是否成功送达。握手过程中使用了TCP的标志：SYN和ACK。</p>
+                    <p>发送端首先发送一个带SYN标志的数据包给对方。接收端收到后，回传一个带有SYN/ACK标志的数据包以示传达确认信息。 最后，发送端再回传一个带ACK标志的数据包，代表“握手”结束。 若在握手过程中某个阶段莫名中断，TCP协议会再次以相同的顺序发送相同的数据包。</p>
+                    <h5>断开一个TCP连接则需要“四次握手”：</h5>
+                    <ul>
+                        <li>第一次挥手：主动关闭方发送一个FIN，用来关闭主动方到被动关闭方的数据传送，也就是主动关闭方告诉被动关闭方：我已经不 会再给你发数据了(当然，在fin包之前发送出去的数据，如果没有收到对应的ack确认报文，主动关闭方依然会重发这些数据)，但是，此时主动关闭方还可 以接受数据。</li>
+                        <li>第二次挥手：被动关闭方收到FIN包后，发送一个ACK给对方，确认序号为收到序号+1（与SYN相同，一个FIN占用一个序号）。</li>
+                        <li>第三次挥手：被动关闭方发送一个FIN，用来关闭被动关闭方到主动关闭方的数据传送，也就是告诉主动关闭方，我的数据也发送完了，不会再给你发数据了。</li>
+                        <li>第四次挥手：主动关闭方收到FIN后，发送一个ACK给被动关闭方，确认序号为收到序号+1，至此，完成四次挥手。</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item">
+                <h3>6.TCP和UDP的区别</h3>
+                <div class="content">
+                    <p>TCP（Transmission Control Protocol，传输控制协议）是基于连接的协议，也就是说，在正式收发数据前，必须和对方建立可靠的连接。一个TCP连接必须要经过三次“对话”才能建立起来</p>
+                    <p>UDP（User Data Protocol，用户数据报协议）是与TCP相对应的协议。它是面向非连接的协议，它不与对方建立连接，而是直接就把数据包发送过去！ UDP适用于一次只传送少量数据、对可靠性要求不高的应用环境。</p>
+                </div>
+            </div>
+            <div class="item">
+                <h3>7.渐进增强和优雅降级</h3>
+                <div class="content">
+                    <p>渐进增强 ：针对低版本浏览器进行构建页面，保证最基本的功能，然后再针对高级浏览器进行效果、交互等改进和追加功能达到更好的用户体验。</p>
+                    <p>优雅降级 ：一开始就构建完整的功能，然后再针对低版本浏览器进行兼容。</p>
+                </div>
+            </div>
+            <div class="item">
+                <h3>8.常见web安全及防护原理</h3>
+                <div class="content">
+                    <div class="side">
+                        <h4>sql注入原理</h4>
+                        <p>就是通过把SQL命令插入到Web表单递交或输入域名或页面请求的查询字符串，最终达到欺骗服务器执行恶意的SQL命令。总的来说有以下几点：
+                        </p>
+                        <ol>
+                            <li>永远不要信任用户的输入，要对用户的输入进行校验，可以通过正则表达式，或限制长度，对单引号和双"-"进行转换等。</li>
+                            <li>永远不要使用动态拼装SQL，可以使用参数化的SQL或者直接使用存储过程进行数据查询存取。</li>
+                            <li>永远不要使用管理员权限的数据库连接，为每个应用使用单独的权限有限的数据库连接。</li>
+                            <li>不要把机密信息明文存放，请加密或者hash掉密码和敏感的信息。</li>
+                        </ol>
+                    </div>
+                    <div class="side">
+                        <h4>XSS原理及防范</h4>
+                        <p>Xss(cross-site scripting)攻击指的是攻击者往Web页面里插入恶意 html标签或者javascript代码。比如：攻击者在论坛中放一个看似安全的链接，骗取用户点击后，窃取cookie中的用户私密信息；或者攻击者在论坛中加一个恶意表单，当用户提交表单的时候，却把信息传送到攻击者的服务器中，而不是用户原本以为的信任站点。
+                        </p>
+                    </div>
+                    <div class="side">
+                        <h4>XSS防范方法</h4>
+                        <p>代码里对用户输入的地方和变量都需要仔细检查长度和对”
+                            <”,”>”,”;”,”’”等字符做过滤；其次任何内容写到页面之前都必须加以encode，避免不小心把html tag 弄出来。这一个层面做好，至少可以堵住超过一半的XSS 攻击。</p>
+                        <p>首先，避免直接在cookie 中泄露用户隐私，例如email、密码等等。</p>
+                        <p>其次，通过使cookie 和系统ip 绑定来降低cookie 泄露后的危险。这样攻击者得到的cookie 没有实际价值，不可能拿来重放。</p>
+                        <p>尽量采用POST 而非GET 提交表单</p>
+                    </div>
+                    <div class="side">
+                        <h4>XSS与CSRF有什么区别吗？</h4>
+                        <p>XSS是获取信息，不需要提前知道其他用户页面的代码和数据包。CSRF是代替用户完成指定的动作，需要知道其他用户页面的代码和数据包。</p>
+                        <p>要完成一次CSRF攻击，受害者必须依次完成两个步骤：</p>
+                        <ol>
+                            <li>登录受信任网站A，并在本地生成Cookie。</li>
+                            <li>在不登出A的情况下，访问危险网站B。</li>
+                        </ol>
+                    </div>
+                    <div class="side">
+                        <h4>CSRF的防御</h4>
+                        <ul>
+                            <li>服务端的CSRF方式方法很多样，但总的思想都是一致的，就是在客户端页面增加伪随机数。</li>
+                            <li>通过验证码的方法</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <h3>9.Web Worker 和webSocket</h3>
+                <div class="content">
+                    <h4>worker主线程:</h4>
+                    <ol>
+                        <li>通过 worker = new Worker( url ) 加载一个JS文件来创建一个worker，同时返回一个worker实例。</li>
+                        <li>通过worker.postMessage( data ) 方法来向worker发送数据。</li>
+                        <li>绑定worker.onmessage方法来接收worker发送过来的数据。</li>
+                        <li>可以使用 worker.terminate() 来终止一个worker的执行。</li>
+                    </ol>
+                    <p>WebSocket是Web应用程序的传输协议，它提供了双向的，按序到达的数据流。他是一个HTML5协议，WebSocket的连接是持久的，他通过在客户端和服务器之间保持双工连接，服务器的更新可以被及时推送给客户端，而不需要客户端以一定时间间隔去轮询。</p>
+                </div>
+            </div>
+            <div class="item">
+                <h3>10.HTTP和HTTPS</h3>
+                <div class="content">
+                    <p>HTTP协议通常承载于TCP协议之上，有时也承载于TLS或SSL协议层之上，这个时候，就成了我们常说的HTTPS。 默认HTTP的端口号为80，HTTPS的端口号为443。
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <h3>11.为什么HTTPS安全</h3>
+                <div class="content">
+                    <p>因为网络请求需要中间有很多的服务器路由器的转发。中间的节点都可能篡改信息，而如果使用HTTPS，密钥在你和终点站才有。https之所以比http安全，是因为他利用ssl/tls协议传输。它包含证书，卸载，流量转发，负载均衡，页面适配，浏览器适配，refer传递等。保障了传输过程的安全性</p>
+                </div>
+            </div>
+            <div class="item">
+                <h3>12.对前端模块化的认识</h3>
+                <div class="content">
+                    <ul>
+                        <li>AMD 是 RequireJS 在推广过程中对模块定义的规范化产出。</li>
+                        <li>CMD 是 SeaJS 在推广过程中对模块定义的规范化产出。</li>
+                    </ul>
+                    <p>AMD 是提前执行，CMD 是延迟执行。</p>
+                    <p>AMD推荐的风格通过返回一个对象做为模块对象，CommonJS的风格通过对module.exports或exports的属性赋值来达到暴露模块对象的目的。</p>
+                    <h4>CMD模块方式</h4>
+                    <img src="images/CMD.png" class="codeImg">
+                </div>
+            </div>
+            <div class="item">
+                <h3>13.你觉得前端工程的价值体现在哪</h3>
+                <div class="content">
+                    <ul>
+                        <li>为简化用户使用提供技术支持（交互部分）</li>
+                        <li>为多个浏览器兼容性提供支持</li>
+                        <li>为提高用户浏览速度（浏览器性能）提供支持</li>
+                        <li>为跨平台或者其他基于webkit或其他渲染引擎的应用提供支持</li>
+                        <li>为展示数据提供支持（数据接口）</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item">
+                <h3>14.谈谈性能优化问题</h3>
+                <div class="content">
+                    <p>代码层面：避免使用css表达式，避免使用高级选择器，通配选择器。</p>
+                    <p>缓存利用：缓存Ajax，使用CDN，使用外部js和css文件以便缓存，添加Expires头，服务端配置Etag，减少DNS查找等</p>
+                    <p>请求数量：合并样式和脚本，使用css图片精灵，初始首屏之外的图片资源按需加载，静态资源延迟加载。</p>
+                    <p>请求带宽：压缩文件，开启GZIP，</p>
+                    <h4>代码层面的优化</h4>
+                    <ul>
+                        <li>用hash-table来优化查找</li>
+                        <li>少用全局变量</li>
+                        <li>用innerHTML代替DOM操作，减少DOM操作次数，优化javascript性能</li>
+                        <li>用setTimeout来避免页面失去响应</li>
+                        <li>缓存DOM节点查找的结果</li>
+                        <li>避免使用CSS Expression</li>
+                        <li>避免全局查询</li>
+                        <li>避免使用width(width会创建自己的作用域，会增加作用域链长度)</li>
+                        <li>多个变量声明合并</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item">
+                <h3>15.移动端性能优化</h3>
+                <div class="content">
+                    <p>尽量使用css3动画，开启硬件加速。适当使用touch事件代替click事件。避免使用css3渐变阴影效果。</p>
+                </div>
+            </div>
+            <div class="item">
+                <h3>16.什么是Etag？</h3>
+                <div class="content">
+                    <p>当发送一个服务器请求时，浏览器首先会进行缓存过期判断。浏览器根据缓存过期时间判断缓存文件是否过期。</p>
+                    <p>情景一：若没有过期，则不向服务器发送请求，直接使用缓存中的结果，此时我们在浏览器控制台中可以看到 200 OK(from cache) ，此时的情况就是完全使用缓存，浏览器和服务器没有任何交互的。</p>
+                    <p>情景二：若已过期，则向服务器发送请求，此时请求中会带上①中设置的文件修改时间，和Etag</p>
+                    <p>然后，进行资源更新判断。服务器根据浏览器传过来的文件修改时间，判断自浏览器上一次请求之后，文件是不是没有被修改过；根据Etag，判断文件内容自上一次请求之后，有没有发生变化</p>
+                    <p>情形一：若两种判断的结论都是文件没有被修改过，则服务器就不给浏览器发index.html的内容了，直接告诉它，文件没有被修改过，你用你那边的缓存吧—— 304 Not Modified，此时浏览器就会从本地缓存中获取index.html的内容。此时的情况叫协议缓存，浏览器和服务器之间有一次请求交互。</p>
+                    <p>情形二：若修改时间和文件内容判断有任意一个没有通过，则服务器会受理此次请求，之后的操作同①</p>
+                    <p>① 只有get请求会被缓存，post请求不会</p>
+                </div>
+            </div>
+            <div class="item">
+                <h3>17.ETag应用</h3>
+                <div class="content">
+                    <p>Etag由服务器端生成，客户端通过If-Match或者说If-None-Match这个条件判断请求来验证资源是否修改。常见的是使用If-None-Match。请求一个文件的流程可能如下：</p>
+                    <p>====第一次请求===</p>
+                    <p>1.客户端发起 HTTP GET 请求一个文件；
+                        <br> 2.服务器处理请求，返回文件内容和一堆Header，当然包括Etag(例如"2e681a-6-5d044840")(假设服务器支持Etag生成和已经开启了Etag).状态码200
+                    </p>
+                    <p>====第二次请求===</p>
+                    <p>
+                        客户端发起 HTTP GET 请求一个文件，注意这个时候客户端同时发送一个If-None-Match头，这个头的内容就是第一次请求时服务器返回的Etag：2e681a-6-5d0448402.服务器判断发送过来的Etag和计算出来的Etag匹配，因此If-None-Match为False，不返回200，返回304，客户端继续使用本地缓存；流程很简单，问题是，如果服务器又设置了Cache-Control:max-age和Expires呢，怎么办?
+                    </p>
+                    <p>答案是同时使用，也就是说在完全匹配If-Modified-Since和If-None-Match即检查完修改时间和Etag之后， 服务器才能返回304(不要陷入到底使用谁的问题怪圈) 。为什么使用Etag请求头? Etag 主要为了解决 Last-Modified 无法解决的一些问题。</p>
+                </div>
+            </div>
+            <div class="item">
+                <h3>18.Expires和Cache-Control</h3>
+                <div class="content">
+                    <p>Expires要求客户端和服务端的时钟严格同步。HTTP1.1引入Cache-Control来克服Expires头的限制。如果max-age和Expires同时出现，则max-age有更高的优先级。</p>
+                    <img src="images/Cache-control.png" class="codeImg">
+                </div>
+            </div>
+            <div class="item">
+                <h3>19.栈和队列的区别?</h3>
+                <div class="content">
+                    <p>栈的插入和删除操作都是在一端进行的，而队列的操作却是在两端进行的。 队列先进先出，栈先进后出。 栈只允许在表尾一端进行插入和删除，而队列只允许在表尾一端进行插入，在表头一端进行删除
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <h3>20.栈和堆的区别？</h3>
+                <div class="content">
+                    <p>栈区（stack）— 由编译器自动分配释放 ，存放函数的参数值，局部变量的值等。</p>
+                    <p>堆区（heap） — 一般由程序员分配释放， 若程序员不释放，程序结束时可能由OS回收。</p>
+                    <p>堆（数据结构）：堆可以被看成是一棵树，如：堆排序；</p>
+                    <p>栈（数据结构）：一种先进后出的数据结构。</p>
+                </div>
+            </div>
+            <div class="item">
+                <h3>21.快速排序的思想并实现一个快排</h3>
+                <div class="content">
+                    <p>"快速排序"的思想很简单，整个排序过程只需要三步：</p>
+                    <ol>
+                        <li>在数据集之中，找一个基准点</li>
+                        <li>建立两个数组，分别存储左边和右边的数组</li>
+                        <li>利用递归进行下次比较</li>
+                    </ol>
+                    <img src="images/quickSort.png" class="codeImg">
+                </div>
+            </div>
+            <div class="item">
+                <h3>21.关于Http 2.0 你知道多少？</h3>
+                <div class="content">
+                    <p>HTTP/2引入了“服务端推（server push）”的概念，它允许服务端在客户端需要数据之前就主动地将数据发送到客户端缓存中，从而提高性能。</p>
+                    <p>HTTP/2提供更多的加密支持</p>
+                    <p>HTTP/2使用多路技术，允许多个消息在一个连接上同时交差。</p>
+                    <p>它增加了头压缩（header compression），因此即使非常小的请求，其请求和响应的header都只会占用很小比例的带宽。</p>
+                </div>
+            </div>
+            <div class="item">
+                <h3>22.如何评价angulajs和backbonejs</h3>
+                <div class="content">
+                    <p>backbone具有依赖性，依赖underscore.js。Backbone + Underscore + jQuery(or Zepto) 就比一个AngularJS 多出了2 次HTTP请求.</p>
+                    <p>Backbone的Model没有与UI视图数据绑定，而是需要在View中自行操作DOM来更新或读取UI数据。AngularJS与此相反，Model直接与UI视图绑定，Model与UI视图的关系，通过directive封装，AngularJS内置的通用directive，就能实现大部分操作了，也就是说，基本不必关心Model与UI视图的关系，直接操作Model就行了，UI视图自动更新。</p>
+                    <p>AngularJS的directive，你输入特定数据，他就能输出相应UI视图。是一个比较完善的前端MVW框架，包含模板，数据双向绑定，路由，模块化，服务，依赖注入等所有功能，模板功能强大丰富，并且是声明式的，自带了丰富的 Angular 指令。</p>
+                </div>
+            </div>
+            <div class="item">
+                <h3>23.请你谈谈Cookie的弊端</h3>
+                <div class="content">
+                    <p>cookie虽然在持久保存客户端数据提供了方便，分担了服务器存储的负担，但还是有很多局限性的。</p>
+                    <p>每个特定的域名下最多生成20个cookie</p>
+                    <div class="note">
+                        <p>1.IE6或更低版本最多20个cookie</p>
+                        <p>2.IE7和之后的版本最后可以有50个cookie。</p>
+                        <p>3.Firefox最多50个cookie</p>
+                        <p>4.chrome和Safari没有做硬性限制</p>
+                    </div>
+                    <p>IE和Opera 会清理近期最少使用的cookie，Firefox会随机清理cookie。</p>
+                    <p>cookie的最大大约为4096字节，为了兼容性，一般不能超过4095字节。</p>
+                    <p>IE 提供了一种存储可以持久化用户数据，叫做userdata，从IE5.0就开始支持。每个数据最多128K，每个域名下最多1M。这个持久化数据放在缓存中，如果缓存没有清理，那么会一直存在。</p>
+                    <h4>优点：极高的扩展性和可用性</h4>
+                    <ol>
+                        <li>通过良好的编程，控制保存在cookie中的session对象的大小。</li>
+                        <li>通过加密和安全传输技术（SSL），减少cookie被破解的可能性。</li>
+                        <li>只在cookie中存放不敏感数据，即使被盗也不会有重大损失。</li>
+                        <li>控制cookie的生命期，使之不会永远有效。偷盗者很可能拿到一个过期的cookie。</li>
+                    </ol>
+                    <h4>缺点</h4>
+                    <ol>
+                        <li>`Cookie`数量和长度的限制。每个domain最多只能有20条cookie，每个cookie长度不能超过4KB，否则会被截掉.</li>
+                        <li>安全性问题。如果cookie被人拦截了，那人就可以取得所有的session信息。即使加密也与事无补，因为拦截者并不需要知道cookie的意义，他只要原样转发cookie就可以达到目的了。</li>
+                        <li>有些状态不可能保存在客户端。例如，为了防止重复提交表单，我们需要在服务器端保存一个计数器。如果我们把这个计数器保存在客户端，那么它起不到任何作用。</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="item">
+                <h3>24.web storage和cookie的区别</h3>
+                <div class="content">
+                    <p>Web Storage的概念和cookie相似，区别是它是为了更大容量存储设计的。Cookie的大小是受限的，并且每次你请求一个新的页面的时候Cookie都会被发送过去，这样无形中浪费了带宽，另外cookie还需要指定作用域，不可以跨域调用。</p>
+                    <p>除此之外，Web Storage拥有setItem,getItem,removeItem,clear等方法，不像cookie需要前端开发者自己封装setCookie，getCookie。</p>
+                    <p>但是cookie也是不可以或缺的：cookie的作用是与服务器进行交互，作为HTTP规范的一部分而存在 ，而Web Storage仅仅是为了在本地“存储”数据而生。</p>
+                    <p>浏览器的支持除了IE７及以下不支持外，其他标准浏览器都完全支持(ie及FF需在web服务器里运行)，值得一提的是IE总是办好事，例如IE7、IE6中的userData其实就是javascript本地存储的解决方案。通过简单的代码封装可以统一到所有的浏览器都支持web storage。</p>
+                    <p>localStorage和sessionStorage都具有相同的操作方法，例如setItem、getItem和removeItem等。</p>
+                </div>
+            </div>
+            <div class="item">
+                <h3>25.cookie 和session 的区别：</h3>
+                <div class="content">
+                    <ol>
+                        <li>cookie数据存放在客户的浏览器上，session数据放在服务器上。</li>
+                        <li>cookie不是很安全，别人可以分析存放在本地的COOKIE并进行COOKIE欺骗，考虑到安全应当使用session。</li>
+                        <li>session会在一定时间内保存在服务器上。当访问增多，会比较占用你服务器的性能， 考虑到减轻服务器性能方面，应当使用COOKIE。
+                        </li>
+                        <li>单个cookie保存的数据不能超过4K，很多浏览器都限制一个站点最多保存20个cookie。</li>
+                        <li>所以个人建议：将登陆信息等重要信息存放为SESSION ；其他信息如果需要保留，可以放在COOKIE中
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="item">
+                <h3>26.一个页面从输入 URL 到页面加载显示完成，这个过程中都发生了什么</h3>
+                <div class="content">
+                    <p>简单来说，浏览器会解析`HTML`生成`DOM Tree`，其次会根据CSS生成CSS Rule Tree，而`javascript`又可以根据`DOM API`操作`DOM`</p>
+                    <ol>
+                        <li>当发送一个URL请求时，不管这个URL是Web页面的URL还是Web页面上每个资源的URL，浏览器都会开启一个线程来处理这个请求，同时在远程DNS服务器上启动一个DNS查询。这能使浏览器获得请求对应的IP地址。</li>
+                        <li>浏览器与远程`Web`服务器通过`TCP`三次握手协商来建立一个`TCP/IP`连接。该握手包括一个同步报文，一个同步-应答报文和一个应答报文，这三个报文在 浏览器和服务器之间传递。该握手首先由客户端尝试建立起通信，而后服务器应答并接受客户端的请求，最后由客户端发出该请求已经被接受的报文。
+                        </li>
+                        <li>一旦`TCP/IP`连接建立，浏览器会通过该连接向远程服务器发送`HTTP`的`GET`请求。远程服务器找到资源并使用HTTP响应返回该资源，值为200的HTTP响应状态表示一个正确的响应。
+                        </li>
+                        <li>此时，`Web`服务器提供资源服务，客户端开始下载资源。</li>
+                    </ol>
+                    <p>详见：<a href="http://segmentfault.com/a/1190000000697254" target="_blank">从输入 URL 到浏览器接收的过程中发生了什么事情</a></p>
+                </div>
+            </div>
+            <div class="item">
+                <h3>27.ie各版本和chrome可以并行下载多少个资源</h3>
+                <div class="content">
+                    <p>IE6 两个并发，iE7升级之后的6个并发，之后版本也是6个 Firefox，chrome也是6个
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <h3>28.Flash、Ajax各自的优缺点，在使用中如何取舍？</h3>
+                <div class="content">
+                    <p>Flash适合处理多媒体、矢量图形、访问机器；对CSS、处理文本上不足，不容易被搜索。 -Ajax对CSS、文本支持很好，支持搜索；多媒体、矢量图形、机器访问不足。
+                    </p>
+                    <p>共同点：与服务器的无刷新传递消息、用户离线和在线状态、操作DOM</p>
+                </div>
+            </div>
+            <div class="item">
+                <h3>29.网站重构的理解</h3>
+                <div class="content">
+                    <p>网站重构：在不改变外部行为的前提下，简化结构、添加可读性，而在网站前端保持一致的行为。也就是说是在不改变UI的情况下，对网站进行优化，在扩展的同时保持一致的UI。</p>
+                    <p>对于传统的网站来说重构通常是：</p>
+                    <ul>
+                        <li>表格(table)布局改为DIV+CSS</li>
+                        <li>使网站前端兼容于现代浏览器(针对于不合规范的CSS、如对IE6有效的)</li>
+                        <li>对于移动平台的优化</li>
+                        <li>针对于SEO进行优化</li>
+                        <li>深层次的网站重构应该考虑的方面</li>
+                        <li>减少代码间的耦合</li>
+                        <li>让代码保持弹性</li>
+                        <li>严格按规范编写代码</li>
+                        <li>设计可扩展的API</li>
+                        <li>代替旧有的框架、语言(如VB)</li>
+                        <li>增强用户体验</li>
+                        <li>通常来说对于速度的优化也包含在重构中</li>
+                        <li>压缩JS、CSS、image等前端资源(通常是由服务器来解决)</li>
+                        <li>程序的性能优化(如数据读写)</li>
+                        <li>采用CDN来加速资源加载</li>
+                        <li>对于JS DOM的优化</li>
+                        <li>HTTP服务器的文件缓存</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item">
+                <h3>30.HTTP状态码</h3>
+                <div class="content">
+                    <ul>
+                        <li>100 Continue 继续，一般在发送post请求时，已发送了http header之后服务端将返回此信息，表示确认，之后发送具体参数信息</li>
+                        <li>200 OK 正常返回信息</li>
+                        <li>202 Accepted 服务器已接受请求，但尚未处理</li>
+                        <li>301 Moved Permanently 请求的网页已永久移动到新位置</li>
+                        <li>302 Found 临时性重定向</li>
+                        <li>303 See Other 临时性重定向，且总是使用 GET 请求新的 URI</li>
+                        <li>304 Not Modified 自从上次请求后，请求的网页未修改过</li>
+                        <li>400 Bad Request 服务器无法理解请求的格式，客户端不应当尝试再次使用相同的内容发起请求</li>
+                        <li>401 Unauthorized 请求未授权</li>
+                        <li>403 Forbidden 禁止访问</li>
+                        <li>404 Not Found 找不到如何与 URI 相匹配的资源</li>
+                        <li>500 Internal Server Error 最常见的服务器端错误</li>
+                        <li>503 Service Unavailable 服务器端暂时无法处理请求（可能是过载或维护）</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item">
+                <h3>31.什么是组件</h3>
+                <div class="content">
+                    <p>所谓组件，即封装起来的具有独立功能的UI部件。如：<span class="codeColor">component , widget , module , plugin ...</span></p>
+                </div>
+            </div>
+            <div class="item">
+                <h3>32.说说你对AMD和Commonjs的理解</h3>
+                <div class="content">
+                    <p>CommonJS是服务器端模块的规范，Node.js采用了这个规范。CommonJS规范加载模块是同步的，也就是说，只有加载完成，才能执行后面的操作。AMD规范则是非同步加载模块，允许指定回调函数。</p>
+                    <p>AMD推荐的风格通过返回一个对象做为模块对象，CommonJS的风格通过对module.exports或exports的属性赋值来达到暴露模块对象的目的。</p>
+                </div>
+            </div>
+            <div class="item">
+                <h3>33.git fetch和git pull的区别</h3>
+                <div class="content">
+                    <p>git pull：相当于是从远程获取最新版本并merge到本地</p>
+                    <p>git fetch：相当于是从远程获取最新版本到本地，不会自动merge</p>
+                </div>
+            </div>
+            <div class="item">
+                <h3>34.说说你对MVC和MVVM的理解</h3>
+                <div class="content">
+                    <h4>MVC</h4>
+                    <p>View 传送指令到 Controller</p>
+                    <p>Controller 完成业务逻辑后，要求 Model 改变状态</p>
+                    <p>Model 将新的数据发送到 View，用户得到反馈</p>
+                    <h4>MVVM</h4>
+                    <p>View：UI界面</p>
+                    <p>ViewModel：它是View的抽象，负责View与Model之间信息转换，将View的Command传送到Model</p>
+                    <p>Model：数据访问层</p>
+                </div>
+            </div>
+            <div class="item">
+                <h3>35.说说网络分层里七层模型是哪七层</h3>
+                <div class="content">
+                    <p>应用层：应用层、表示层、会话层（从上往下）（HTTP、FTP、SMTP、DNS）；传输层（TCP和UDP）；网络层（IP）；物理和数据链路层（以太网）每一层的具体作用如下：</p>
+                    <ul>
+                        <li>应用层：允许访问OSI环境的手段（应用协议数据单元APDU）</li>
+                        <li>表示层：对数据进行翻译、加密和压缩（表示协议数据单元PPDU）</li>
+                        <li>会话层：建立、管理和终止会话（会话协议数据单元SPDU）</li>
+                        <li>传输层：提供端到端的可靠报文传递和错误恢复（段Segment）</li>
+                        <li>网络层：负责数据包从源到宿的传递和网际互连（包PackeT）</li>
+                        <li>物理层：通过媒介传输比特,确定机械及电气规范（比特Bit）</li>
+                        <li>数据链路层：将比特组装成帧和点到点的传递（帧Frame）</li>
+                    </ul>
+                    <p>各种协议</p>
+                    <ul>
+                        <li>ICMP协议： 因特网控制报文协议。它是TCP/IP协议族的一个子协议，用于在IP主机、路由器之间传递控制消息。 </li>
+                        <li>TFTP协议： 是TCP/IP协议族中的一个用来在客户机与服务器之间进行简单文件传输的协议，提供不复杂、开销不大的文件传输服务。</li>
+                        <li>HTTP协议： 超文本传输协议，是一个属于应用层的面向对象的协议，由于其简捷、快速的方式，适用于分布式超媒体信息系统。 </li>
+                        <li>DHCP协议： 动态主机配置协议，是一种让系统得以连接到网络上，并获取所需要的配置参数手段。</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item">
+                <h3>36.说说mongoDB和MySQL的区别</h3>
+                <div class="content">
+                    <p>MySQL是传统的关系型数据库，MongoDB则是非关系型数据库</p>
+                    <p>mongodb以BSON结构（二进制）进行存储，对海量数据存储有着很明显的优势。</p>
+                </div>
+            </div>
+            <div class="item">
+                <h3>37.讲讲304缓存的原理</h3>
+                <div class="content">
+                    <p>服务器首先产生ETag，服务器可在稍后使用它来判断页面是否已经被修改。本质上，客户端通过将该记号传回服务器要求服务器验证其（客户端）缓存。</p>
+                    <p>304是HTTP状态码，服务器用来标识这个文件没修改，不返回内容，浏览器在接收到个状态码后，会使用浏览器已缓存的文件</p>
+                    <p>客户端请求一个页面（A）。 服务器返回页面A，并在给A加上一个ETag。 客户端展现该页面，并将页面连同ETag一起缓存。 客户再次请求页面A，并将上次请求时服务器返回的ETag一起传递给服务器。 服务器检查该ETag，并判断出该页面自上次客户端请求之后还未被修改，直接返回响应304（未修改——Not Modified）和一个空的响应体。</p>
+                </div>
+            </div>
+            <div class="item">
+                <h3>38.什么样的前端代码是好的</h3>
+                <div class="content">
+                    <p>高复用低耦合，这样文件小，好维护，而且好扩展。</p>
+                </div>
+            </div>
+            <div class="item">
+                <h3>39.说说你对前端架构师的理解</h3>
+                <div class="content">
+                    <p>负责前端团队的管理及与其他团队的协调工作，提升团队成员能力和整体效率； 带领团队完成研发工具及平台前端部分的设计、研发和维护； 带领团队进行前端领域前沿技术研究及新技术调研，保证团队的技术领先 负责前端开发规范制定、功能模块化设计、公共组件搭建等工作，并组织培训。</p>
+                </div>
+            </div>
+            <div class="item">
+                <h3>40.对前端界面工程师这个职位是怎么样理解的？它的前景会怎么样？</h3>
+                <div class="content">
+                    <p>前端是最贴近用户的程序员，比后端、数据库、产品经理、运营、安全都近。
+                    </p>
+                    <ol>
+                        <li>实现界面交互</li>
+                        <li>提升用户体验</li>
+                        <li>有了Node.js，前端可以实现服务端的一些事情</li>
+                    </ol>
+                    <p>前端是最贴近用户的程序员，前端的能力就是能让产品从 90分进化到 100 分，甚至更好，</p>
+                    <ol>
+                        <li>参与项目，快速高质量完成实现效果图，精确到1px；</li>
+                        <li>与团队成员，UI设计，产品经理的沟通；</li>
+                        <li>做好的页面结构，页面重构和用户体验；</li>
+                        <li>处理hack，兼容、写出优美的代码格式；</li>
+                        <li>针对服务器的优化、拥抱最新前端技术。</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="sidebox">
+        <span class="list" id="list" title="点击收起/展开目录">目&nbsp;&nbsp;录</span>
+        <ul class="ul" id="ul" >
+            <li><a href="#partOne">HTML部分</a></li>
+            <li><a href="#partTwo">CSS部分</a></li>
+            <li><a href="#partThree">JavaScript部分</a></li>
+            <li><a href="#partFour">开放性试题</a></li>
+        </ul>
+        <span class="reTop" id="reTop">返回顶部</span>
+    </div>
+    <script src="script.js"></script>	
+</body>
+
+</html>
