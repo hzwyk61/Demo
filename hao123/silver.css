@@ -1,0 +1,756 @@
+/* ==========css重置=============================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    font: 13px/100% arial, "Hiragino Sans GB", "Hiragino Sans GB W3", \5b8b\4f53;
+    width: 100%;
+    height: 100%;
+    background: url(img/hf_body_bg.png)repeat-x left top;
+}
+
+
+/* ==========头部导航区=============================================================== */
+
+header {
+    width: 100%;
+    height: 60px;
+    border-bottom: solid 1px rgb(238, 238, 238);
+    background-color: rgb(252, 252, 252);
+    position: relative;
+}
+
+.headerNav {
+    width: 1190px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.headerNav .webLogo {
+    float: left;
+}
+
+.headerNav span {
+    line-height: 60px;
+    color: #999;
+    margin-right: 5px;
+    font-size: 12px;
+}
+
+
+/* ==========设为首页=============================================================== */
+
+.headerNav .setHome {
+    display: inline-block;
+    height: 100%;
+    float: left;
+}
+
+.headerNav .setHome span {
+    display: inline-block;
+    background: url(img/index_widthlg.png)no-repeat -20px -170px;
+    color: white;
+    width: 60px;
+    height: 30px;
+    text-align: center;
+    line-height: 25px;
+    margin-top: 18px;
+}
+
+.headerNav .setHome span:hover {
+    text-decoration: underline;
+}
+
+.headerNav .weather {
+    display: inline-block;
+    float: left;
+    height: 100%;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+
+/* ==========天气与日期=============================================================== */
+
+.headerNav .weather span i {
+    display: inline-block;
+    background: url(img/index_widthlg.png) no-repeat -52px -97px;
+    width: 9px;
+    height: 6px;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.headerNav .weather img {
+    vertical-align: middle;
+}
+
+.headerNav .date {
+    display: inline-block;
+    float: left;
+    height: 100%;
+    margin-left: 10px;
+    cursor: pointer;
+    margin-right: 135px;
+}
+
+.headerNav .date .dateNum {
+    display: inline-block;
+    width: 24px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background: url(img/index_widthlg.png)no-repeat -20px -62px;
+}
+
+
+/* ==========用户导航区=============================================================== */
+
+.headerNav .userList {
+    display: inline-block;
+    float: left;
+}
+
+.headerNav .userList li {
+    display: inline-block;
+    height: 100%;
+}
+
+.headerNav .userList li .login {
+    display: inline-block;
+    width: 30px;
+    height: 60px;
+    float: left;
+    line-height: 60px;
+    background: url(img/index_widthlg.png)no-repeat -30px -110px;
+}
+
+.headerNav .userList li .email {
+    display: inline-block;
+    width: 30px;
+    float: left;
+    height: 60px;
+    line-height: 60px;
+    background: url(img/index_widthlg.png)no-repeat -96px -108px;
+}
+
+.headerNav .userList li .browser {
+    display: inline-block;
+    height: 60px;
+    width: 30px;
+    float: left;
+    line-height: 60px;
+    background: url(img/index_widthlg.png)no-repeat -162px -109px;
+}
+
+.headerNav .userList li .skin {
+    display: inline-block;
+    height: 60px;
+    width: 30px;
+    float: left;
+    line-height: 60px;
+    background: url(img/index_widthlg.png)no-repeat -244px -108px;
+}
+
+.headerNav .userList li a {
+    display: inline-block;
+    text-decoration: none;
+    color: #999;
+    height: 60px;
+    line-height: 60px;
+    margin-right: 10px;
+    float: left;
+}
+
+.headerNav .weather:hover,
+.headerNav .date:hover,
+.headerNav .userList li:hover {
+    background-color: rgb(247, 247, 247);
+}
+
+
+/* ==========右侧动漫图片=============================================================== */
+
+.headerNav .magBox {
+    position: relative;
+    width: 220px;
+    height: 60px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.headerNav .magBox .magtImg {
+    height: 60px;
+    width: 1320px;
+    position: absolute;
+}
+
+.headerNav .magBox img {
+    float: left;
+}
+
+
+/* ==========搜索框区域=============================================================== */
+
+.headerInput {
+    width: 1190px;
+    height: 83px;
+    margin: 0 auto;
+}
+
+.headerInput .searchLogo {
+    float: left;
+    margin-top: 5px;
+    margin-right: 15px;
+}
+
+.headerInput .searchBox {
+    width: 830px;
+    height: 40px;
+    margin-top: 40px;
+    margin-left: 150px;
+    position: absolute;
+}
+
+.headerInput .searchText {
+    float: left;
+    width: 500px;
+    height: 28px;
+    padding: 5px 3px 5px 6px;
+    margin-left: 10px;
+    font: 16px arial;
+    outline: none;
+    box-shadow: inset 0 0 2px 1px rgb(200, 200, 200);
+    border: solid 1px #999;
+    border-right: 0;
+}
+
+.headerInput .searchBtn {
+    border: 0;
+    width: 120px;
+    height: 40px;
+    background: url(img/index_widthlg.png) no-repeat -20px 0;
+    outline: none;
+    cursor: pointer;
+}
+
+
+/* ==========主题切换区域=============================================================== */
+
+.headerInput .themes {
+    height: 83px;
+}
+
+.headerInput .themes span {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    margin: 50px 10px;
+    cursor: pointer;
+}
+
+.headerInput .themes .forest {
+    background-color: green;
+}
+
+.headerInput .themes .sky {
+    background-color: skyblue;
+}
+
+.headerInput .themes .rose {
+    background-color: crimson;
+}
+
+.headerInput .themes .night {
+    background-color: lightgray;
+}
+
+.headerInput .themes .forest:hover,
+.headerInput .themes .sky:hover,
+.headerInput .themes .rose:hover,
+.headerInput .themes .night:hover {
+    width: 14px;
+    height: 14px;
+    /*box-shadow: 0 0 2px rgb(238,238,238);*/
+}
+
+
+/* ==========热词=============================================================== */
+
+.hotWords {
+    height: 30px;
+    width: 1190px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.hotWords ul {
+    position: absolute;
+    height: 30px;
+    margin-left: 276px;
+}
+
+.hotWords ul li {
+    display: inline-block;
+    line-height: 30px;
+    margin: 0 5px;
+    float: left;
+}
+
+.hotWords ul li span {
+    color: silver;
+    cursor: pointer;
+}
+
+.hotWords ul li:nth-last-child(1) {
+    margin-left: 30px;
+}
+
+.hotWords ul li span:hover {
+    text-decoration: underline;
+}
+
+.hotWords ul li {
+    font-size: 12px;
+    color: #666;
+    cursor: pointer;
+}
+
+.hotWords ul li:hover {
+    color: #F30;
+    text-decoration: underline;
+}
+
+
+/* ==========主体部分=============================================================== */
+
+article {
+    width: 1190px;
+    height: 380px;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 138px;
+}
+
+
+/* ==========导航栏=============================================================== */
+
+.mainNav {
+    width: 1190px;
+    height: 38px;
+    margin: 0 auto;
+    border-top: solid 2px silver;
+    border-bottom: solid 1px rgb(238, 238, 238);
+    background-color: rgb(252, 252, 252);
+    cursor: pointer;
+}
+
+.mainNav ul {
+    width: 100%;
+    height: 38px;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.mainNav ul .first {
+    display: inline-block;
+    width: 77px;
+    line-height: 38px;
+    font-family: Microsoft Yahei;
+    font-size: 16px;
+    text-align: center;
+}
+
+.mainNav ul .active {
+    background-color: silver;
+    color: #FFFFFF;
+}
+
+.mainNav ul .active:hover {
+    color: #FFFFFF;
+}
+
+.mainNav ul li:not(.first) {
+    display: inline-block;
+    flex: 1 10 100%;
+    line-height: 38px;
+    font-family: Microsoft Yahei;
+    font-size: 16px;
+    text-align: center;
+}
+
+.mainNav ul li:hover {
+    color: #118850;
+}
+
+.mainNav ul li span {
+    display: block;
+    width: 1px;
+    height: 40px;
+    float: left;
+    background: url(img/menus_split.png) center left no-repeat;
+}
+
+
+/* =======左侧分类菜单区============================================================ */
+
+.leftPart {
+    width: 280px;
+    position: relative;
+    margin-top: 10px;
+    display: inline-block;
+    float: left;
+}
+
+.leftPart .assortMenu {
+    width: 278px;
+    height: 190px;
+    border: 1px solid #cecece;
+    background-color: rgb(255, 255, 255);
+}
+
+.leftPart .assortMenu ul {
+    margin-left: 18px;
+    margin-top: 15px;
+}
+
+.leftPart .assortMenu ul li {
+    display: inline-block;
+    width: 128px;
+    height: 20px;
+    font-size: 15px;
+    margin: 4px 0;
+}
+
+.leftPart .assortMenu ul li .special {
+    color: red;
+}
+
+.leftPart .assortMenu ul li a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.leftPart .assortMenu ul li a:hover {
+    text-decoration: underline;
+    color: #f50;
+}
+
+.leftPart .assortMenu ul li span {
+    padding: 0 5px;
+    color: #999999;
+}
+
+.leftPart .assortMenu ul li i {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-top: -3px;
+    margin-right: 2px;
+    float: left;
+}
+
+.leftPart .assortMenu ul li:nth-child(1) i {
+    background: url(img/index_menus_widthlg.png) no-repeat -20px -81px;
+}
+
+.leftPart .assortMenu ul li:nth-child(2) i {
+    background: url(img/index_menus_widthlg.png) no-repeat -19px -301px;
+}
+
+.leftPart .assortMenu ul li:nth-child(3) i {
+    background: url(img/index_menus_widthlg.png) no-repeat -20px -160px;
+}
+
+.leftPart .assortMenu ul li:nth-child(4) i {
+    background: url(img/index_menus_widthlg.png) no-repeat -20px -381px;
+}
+
+.leftPart .assortMenu ul li:nth-child(5) i {
+    background: url(img/index_menus_widthlg.png) no-repeat -20px -100px;
+}
+
+.leftPart .assortMenu ul li:nth-child(6) i {
+    background: url(img/index_menus_widthlg.png) no-repeat -20px -261px;
+}
+
+.leftPart .assortMenu ul li:nth-child(7) i {
+    background: url(img/index_menus_widthlg.png) no-repeat -20px -21px;
+}
+
+.leftPart .assortMenu ul li:nth-child(8) i {
+    background: url(img/index_menus_widthlg.png) no-repeat -20px -121px;
+}
+
+.leftPart .assortMenu ul li:nth-child(9) i {
+    background: url(img/index_menus_widthlg.png) no-repeat -20px -281px;
+}
+
+.leftPart .assortMenu ul li:nth-child(10) i {
+    background: url(img/index_menus_widthlg.png) no-repeat -20px -362px;
+}
+
+.leftPart .assortMenu ul li:nth-child(11) i {
+    background: url(img/index_menus_widthlg.png) no-repeat -20px -221px;
+}
+
+.leftPart .assortMenu ul li:nth-child(12) i {
+    background: url(img/index_menus_widthlg.png) no-repeat -20px -42px;
+}
+
+.leftPart .conductImg {
+    width: 278px;
+    height: 100px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #cecece;
+    margin-top: 10px;
+    position: relative;
+}
+
+.leftPart .conductImg .about {
+    margin-top: 10px;
+    height: 100%;
+    background: url(img/hao123.png)no-repeat 30px 24px;
+}
+
+.leftPart .conductImg .about span {
+    margin-left: 30px;
+    width: 100px;
+    height: 25px;
+    line-height: 25px;
+    display: inline-block;
+    font-size: 13px;
+    cursor: pointer;
+    float: left;
+    color: rgb(138, 138, 138);
+}
+
+.leftPart .conductImg .about span:hover {
+    text-decoration: underline;
+}
+
+
+/* =======右侧网站分类区============================================================ */
+
+.rightPart {
+    width: 900px;
+    margin-top: 10px;
+    margin-left: 10px;
+    display: inline-block;
+}
+
+.rightPart .Website {
+    width: 898px;
+    height: 280px;
+    border: 1px solid #cecece;
+    background-color: rgb(252, 252, 252);
+    position: relative;
+}
+
+.rightPart .hotWeb ul {
+    padding-top: 15px;
+    padding-left: 15px;
+}
+
+.rightPart .Website ul li {
+    display: inline-block;
+    width: 130px;
+    height: 20px;
+    padding-top: 6px;
+    padding-bottom: 4px;
+    margin-right: 4px;
+    padding-left: 9px;
+    position: relative;
+}
+
+.rightPart .Website ul li a {
+    text-decoration: none;
+    line-height: 20px;
+    font-size: 14px;
+    color: #000;
+}
+
+.rightPart .Website ul li a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+.rightPart .hotWeb ul li i {
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin-right: 3px;
+    display: inline-block;
+}
+
+.rightPart .hotWeb ul li:nth-child(1) i {
+    background: url(img/defaultIcon.png)no-repeat 2px -198px;
+}
+
+.rightPart .hotWeb ul li:nth-child(2) i {
+    background: url(img/defaultIcon.png)no-repeat 2px -278px;
+}
+
+.rightPart .hotWeb ul li:nth-child(3) i {
+    background: url(img/defaultIcon.png)no-repeat 2px -318px;
+}
+
+.rightPart .hotWeb ul li:nth-child(4) i {
+    background: url(img/defaultIcon.png)no-repeat 2px -38px;
+}
+
+.rightPart .hotWeb ul li:nth-child(5) i {
+    background: url(img/defaultIcon.png)no-repeat 2px -157px;
+}
+
+.rightPart .hotWeb ul li:nth-child(6) i {
+    background: url(img/1821.png);
+}
+
+.rightPart .hotWeb ul li:nth-child(7) i {
+    background: url(img/tianmao.png);
+}
+
+.rightPart .hotWeb ul li:nth-child(8) i {
+    background: url(img/defaultIcon.png)no-repeat 2px -238px;
+}
+
+.rightPart .hotWeb ul li:nth-child(9) i {
+    background: url(img/defaultIcon.png)no-repeat 2px -358px;
+}
+
+.rightPart .hotWeb ul li:nth-child(10) i {
+    background: url(img/game0331.png)no-repeat center;
+    ;
+}
+
+.rightPart .hotWeb ul li:nth-child(11) i {
+    background: url(img/defaultIcon.png)no-repeat 2px 2px;
+}
+
+.rightPart .hotWeb ul li:nth-child(12) i {
+    background: url(img/10435.png)no-repeat center;
+    ;
+}
+
+.rightPart .hotWeb ul li:nth-child(13) i {
+    background: url(img/jingdong.png)no-repeat center;
+    ;
+}
+
+.rightPart .hotWeb ul li:nth-child(14) i {
+    background: url(img/juhuasuan.png)no-repeat center;
+    ;
+}
+
+.rightPart .hotWeb ul li:nth-child(15) i {
+    background: url(img/6282.png)no-repeat center;
+    ;
+}
+
+.rightPart .hotWeb ul li:nth-child(16) i {
+    background: url(img/logo1.png)no-repeat center;
+    ;
+}
+
+.rightPart .hotWeb ul li:nth-child(17) i {
+    background: url(img/defaultIcon.png)no-repeat 2px -518px;
+}
+
+.rightPart .hotWeb ul li:nth-child(18) i {
+    background: url(img/quna.png)no-repeat center;
+    ;
+}
+
+.rightPart .Website .setup {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 33px;
+    height: 33px;
+    cursor: pointer;
+    background: url(img/index_widthlg.png) no-repeat -316px -128px;
+}
+
+.rightPart .Website .add {
+    display: inline-block;
+    position: absolute;
+    top: 80px;
+    right: 25px;
+    height: 20px;
+    width: 20px;
+    border: 1px dotted #bbb;
+    background: url(img/index_icon.png) no-repeat -278px -396px;
+    cursor: pointer;
+}
+
+.rightPart .Website .add:hover {
+    border: 1px solid #97c853;
+}
+
+.rightPart .Website .line {
+    margin: 15px 14px 5px 14px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.rightPart .mainWeb ul {
+    padding-left: 15px;
+}
+
+.rightPart .mainWeb ul .special {
+    color: red;
+}
+
+.rightPart .mainWeb ul li:nth-last-child(1) a,
+.rightPart .mainWeb ul li:nth-last-child(2) a,
+.rightPart .mainWeb ul li:nth-last-child(3) a,
+.rightPart .mainWeb ul li:nth-last-child(4) a,
+.rightPart .mainWeb ul li:nth-last-child(5) a,
+.rightPart .mainWeb ul li:nth-last-child(6) a {
+    color: silver;
+}
+
+.rightPart .adverts {
+    width: 900px;
+    height: 30px;
+    padding-left: 60px;
+}
+
+.rightPart .adverts ul li {
+    display: inline-block;
+    padding-right: 25px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.rightPart .adverts ul li a {
+    font-size: 12px;
+    text-decoration: none;
+    color: silver
+}
+
+.rightPart .adverts ul li a:hover {
+    text-decoration: underline;
+}
+
+
+/* =======d底部============================================================ */
+
+footer {
+    margin-top: 20px;
+    width: 100%;
+}
+
+footer .footImg {
+    width: 1190px;
+    height: 100px;
+    margin: 0 auto;
+    background: url(img/silver.jpg)no-repeat;
+    background-size: 100%;
+}
