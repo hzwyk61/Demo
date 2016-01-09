@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)http://the-echoplex.net/flexyboxes/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Flexy Boxes — CSS flexbox playground and code generation tool</title>
+    <meta name="viewport" content="width=990">
+    <meta name="description" content="Online CSS flexbox playground and code generator. Supports all existing flexbox implementations.">
+    <link rel="stylesheet" href="http://the-echoplex.net/flexyboxes/css/flexy-boxes.crush.css?2754631295" media="all">
+    <script async="" type="text/javascript" src="./Flexy Boxes — CSS flexbox playground and code generation tool_files/ca-pub-9884671731478989.js"></script><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script>
+    var App = { baseUrl: '/flexyboxes' };
+    </script>
+    <script src="./Flexy Boxes — CSS flexbox playground and code generation tool_files/markdown.min.js"></script>
+    <script src="./Flexy Boxes — CSS flexbox playground and code generation tool_files/flexy-boxes.js"></script>
+<script src="./Flexy Boxes — CSS flexbox playground and code generation tool_files/ga.js" async="true"></script></head>
+<body>
+
+<div class="outer-wrap">
+
+    <header>
+        <h1><img src="./Flexy Boxes — CSS flexbox playground and code generation tool_files/flexy-boxes.svg" alt=""></h1>
+        <p>flexbox playground and code generator</p>
+    </header>
+
+    <div class="main">
+
+        <div class="pointer-wrapper" title="main axis direction" data-markdown-tooltip="" data-tooltip-nowrap="">
+            <div class="pointer"></div>
+        </div>
+
+        <div class="flex-container flex-container-style fixed-height">
+        <div class="flex-item"><span contenteditable=""></span><span class="counter">1</span></div>
+<div class="flex-item"><span contenteditable=""></span><span class="counter">2</span></div>
+<div class="flex-item"><span contenteditable=""></span><span class="counter">3</span></div>
+        </div>
+        <script id="flex-item-tpl" type="text/html">
+            <div class="flex-item"><span contenteditable></span><span class="counter"></span></div>
+        </script>
+
+        
+        <form>
+            <p class="modifier"><label>Fixed height container (not min-height) <input type="checkbox" name="fixed-height" checked=""></label></p>
+            <p class="modifier"><label>RTL writing mode <input type="checkbox" name="rtl"></label></p>
+        </form>
+
+        <textarea class="output-css" readonly="">.flex-container {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    }
+
+.flex-item:nth-child(1) {
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+    }
+
+.flex-item:nth-child(2) {
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+    }
+
+.flex-item:nth-child(3) {
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+    }
+</textarea>
+
+        
+        <form class="modifier"><label>Generate legacy flexbox styles <input type="checkbox" name="legacy"></label></form>
+        <p class="modifier"><label>Show vanilla CSS <input type="checkbox" class="show-vanilla"></label></p>
+        <textarea class="vanilla-css" readonly="">.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    }
+
+.flex-item:nth-child(1) {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    }
+
+.flex-item:nth-child(2) {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    }
+
+.flex-item:nth-child(3) {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    }
+
+
+</textarea>
+
+    </div><!-- .main -->
+
+    <div class="controls flex-container-style">
+        <form action="" method="get">
+
+<fieldset class="flex-container-fields">
+    <h2 class="title">flex container</h2>
+    <ol class="properties flex-container-styles">
+        <li>
+            <div class="property">display</div>
+            <div class="values">
+                <select name="display">
+                <option selected="">flex</option>
+<option>inline-flex</option>
+                </select>
+            </div>
+        </li>
+        <li>
+            <div class="property">flex-direction</div>
+            <div class="values">
+                <select name="flex-direction">
+                <option selected="">row</option>
+<option>row-reverse</option>
+<option>column</option>
+<option>column-reverse</option>
+                </select>
+                <a title="direction of the flex container&#39;s main axis" data-markdown-tooltip="" class="help">?</a>            </div>
+        </li>
+        <li>
+            <div class="property">flex-wrap</div>
+            <div class="values">
+                <select name="flex-wrap">
+                <option selected="">nowrap</option>
+<option>wrap</option>
+<option>wrap-reverse</option>
+                </select>
+                <a title="controls whether the flex container is single-line or multi-line, and the direction of the cross axis" data-markdown-tooltip="" class="help">?</a>            </div>
+        </li>
+        <li>
+            <div class="property">justify-content</div>
+            <div class="values">
+                <select name="justify-content">
+                <option selected="">flex-start</option>
+<option>flex-end</option>
+<option>center</option>
+<option>space-between</option>
+<option>space-around</option>
+                </select>
+                <a title="align flex items along the main axis of the current line of the flex container" data-markdown-tooltip="" class="help">?</a>            </div>
+        </li>
+        <li>
+            <div class="property">align-items</div>
+            <div class="values">
+                <select name="align-items">
+                <option>flex-start</option>
+<option>flex-end</option>
+<option>center</option>
+<option>baseline</option>
+<option>stretch</option>
+                </select>
+                <a title="align flex items along the cross axis of the current line of the flex container" data-markdown-tooltip="" class="help">?</a>            </div>
+        </li>
+        <li>
+            <div class="property">align-content</div>
+            <div class="values">
+                <select name="align-content">
+                <option>flex-start</option>
+<option>flex-end</option>
+<option>center</option>
+<option>space-between</option>
+<option>space-around</option>
+<option selected="">stretch</option>
+                </select>
+                <a title="align a flex container&#39;s lines within the flex container when there is extra space in the cross axis, similar to how *justify-content* aligns individual items within the main axis.
+
+Note, this property has no effect when the flexbox has only a single line" data-markdown-tooltip="" class="help">?</a>            </div>
+        </li>
+    </ol>
+</fieldset>
+
+<fieldset>
+
+    <h2 class="title">flex items</h2>
+    <ol class="flex-items">
+    <li class="flex-item">
+    <ol class="properties">
+        <li>
+            <div class="property">order</div>
+            <div class="values">
+                <input name="order[]" type="text" class="txt" value="0" size="3">
+                <a title="controls the order in which flex items appear within their flex container" data-markdown-tooltip="" class="help">?</a>
+            </div>
+        </li>
+        <li>
+            <div class="property">flex</div>
+            <div class="values">
+                <input name="flex-grow[]" type="text" class="txt" value="0" size="3">
+                <input name="flex-shrink[]" type="text" class="txt" value="1" size="3">
+                <input name="flex-basis[]" type="text" class="txt" value="auto" size="5">
+                <a title="specifies the components of a flexible length: the *flex grow* factor and *flex shrink* factor, and the *flex basis*.
+
+1. **flex-grow**
+  *Number* which determines how much the flex item will *grow* relative to the rest of the flex items in the flex container when positive free space is distributed.
+2. **flex-shrink**
+  *Number* which determines how much the flex item will *shrink* relative to the rest of the flex items in the flex container when negative free space is distributed.
+3. **flex-basis**
+  The initial *width or height* (depending on main axis) of the flex item, before free space is distributed according to the flex factors." data-markdown-tooltip="" class="help">?</a>
+            </div>
+        </li>
+        <li>
+            <div class="property">align-self</div>
+            <div class="values">
+                <select name="align-self[]"><option selected="">auto</option>
+<option>flex-start</option>
+<option>flex-end</option>
+<option>center</option>
+<option>baseline</option>
+<option>stretch</option>
+                </select>
+                <a title="allows the alignment to be overridden for individual flex items" data-markdown-tooltip="" class="help">?</a>
+            </div>
+        </li>
+    </ol>
+</li><li class="flex-item">
+    <ol class="properties">
+        <li>
+            <div class="property">order</div>
+            <div class="values">
+                <input name="order[]" type="text" class="txt" value="0" size="3">
+                <a title="controls the order in which flex items appear within their flex container" data-markdown-tooltip="" class="help">?</a>
+            </div>
+        </li>
+        <li>
+            <div class="property">flex</div>
+            <div class="values">
+                <input name="flex-grow[]" type="text" class="txt" value="0" size="3">
+                <input name="flex-shrink[]" type="text" class="txt" value="1" size="3">
+                <input name="flex-basis[]" type="text" class="txt" value="auto" size="5">
+                <a title="specifies the components of a flexible length: the *flex grow* factor and *flex shrink* factor, and the *flex basis*.
+
+1. **flex-grow**
+  *Number* which determines how much the flex item will *grow* relative to the rest of the flex items in the flex container when positive free space is distributed.
+2. **flex-shrink**
+  *Number* which determines how much the flex item will *shrink* relative to the rest of the flex items in the flex container when negative free space is distributed.
+3. **flex-basis**
+  The initial *width or height* (depending on main axis) of the flex item, before free space is distributed according to the flex factors." data-markdown-tooltip="" class="help">?</a>
+            </div>
+        </li>
+        <li>
+            <div class="property">align-self</div>
+            <div class="values">
+                <select name="align-self[]"><option selected="">auto</option>
+<option>flex-start</option>
+<option>flex-end</option>
+<option>center</option>
+<option>baseline</option>
+<option>stretch</option>
+                </select>
+                <a title="allows the alignment to be overridden for individual flex items" data-markdown-tooltip="" class="help">?</a>
+            </div>
+        </li>
+    </ol>
+</li><li class="flex-item">
+    <ol class="properties">
+        <li>
+            <div class="property">order</div>
+            <div class="values">
+                <input name="order[]" type="text" class="txt" value="0" size="3">
+                <a title="controls the order in which flex items appear within their flex container" data-markdown-tooltip="" class="help">?</a>
+            </div>
+        </li>
+        <li>
+            <div class="property">flex</div>
+            <div class="values">
+                <input name="flex-grow[]" type="text" class="txt" value="0" size="3">
+                <input name="flex-shrink[]" type="text" class="txt" value="1" size="3">
+                <input name="flex-basis[]" type="text" class="txt" value="auto" size="5">
+                <a title="specifies the components of a flexible length: the *flex grow* factor and *flex shrink* factor, and the *flex basis*.
+
+1. **flex-grow**
+  *Number* which determines how much the flex item will *grow* relative to the rest of the flex items in the flex container when positive free space is distributed.
+2. **flex-shrink**
+  *Number* which determines how much the flex item will *shrink* relative to the rest of the flex items in the flex container when negative free space is distributed.
+3. **flex-basis**
+  The initial *width or height* (depending on main axis) of the flex item, before free space is distributed according to the flex factors." data-markdown-tooltip="" class="help">?</a>
+            </div>
+        </li>
+        <li>
+            <div class="property">align-self</div>
+            <div class="values">
+                <select name="align-self[]"><option selected="">auto</option>
+<option>flex-start</option>
+<option>flex-end</option>
+<option>center</option>
+<option>baseline</option>
+<option>stretch</option>
+                </select>
+                <a title="allows the alignment to be overridden for individual flex items" data-markdown-tooltip="" class="help">?</a>
+            </div>
+        </li>
+    </ol>
+</li>    </ol>
+
+    <p class="add-remove-boxes">
+        <a href="javascript:;" class="add-box icon-plus"><span class="hide">Add box</span></a>
+        <a href="javascript:;" class="remove-box icon-minus"><span class="hide">Remove box</span></a>
+    </p>
+
+    <script id="flex-item-form-tpl" type="text/html">
+    <li class="flex-item">
+    <ol class="properties">
+        <li>
+            <div class="property">order</div>
+            <div class="values">
+                <input name="order[]" type="text" class="txt" value="0" size="3" />
+                <a title="controls the order in which flex items appear within their flex container" data-markdown-tooltip class="help">?</a>
+            </div>
+        </li>
+        <li>
+            <div class="property">flex</div>
+            <div class="values">
+                <input name="flex-grow[]" type="text" class="txt" value="0" size="3" />
+                <input name="flex-shrink[]" type="text" class="txt" value="1" size="3" />
+                <input name="flex-basis[]" type="text" class="txt" value="auto" size="5" />
+                <a title="specifies the components of a flexible length: the *flex grow* factor and *flex shrink* factor, and the *flex basis*.
+
+1. **flex-grow**
+  *Number* which determines how much the flex item will *grow* relative to the rest of the flex items in the flex container when positive free space is distributed.
+2. **flex-shrink**
+  *Number* which determines how much the flex item will *shrink* relative to the rest of the flex items in the flex container when negative free space is distributed.
+3. **flex-basis**
+  The initial *width or height* (depending on main axis) of the flex item, before free space is distributed according to the flex factors." data-markdown-tooltip class="help">?</a>
+            </div>
+        </li>
+        <li>
+            <div class="property">align-self</div>
+            <div class="values">
+                <select name="align-self[]"><option selected>auto</option>
+<option>flex-start</option>
+<option>flex-end</option>
+<option>center</option>
+<option>baseline</option>
+<option>stretch</option>
+                </select>
+                <a title="allows the alignment to be overridden for individual flex items" data-markdown-tooltip class="help">?</a>
+            </div>
+        </li>
+    </ol>
+</li>    </script>
+</fieldset>
+
+</form>
+
+<style id="flex-style">
+.flex-container {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    }
+
+.flex-item:nth-child(1) {
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+    }
+
+.flex-item:nth-child(2) {
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+    }
+
+.flex-item:nth-child(3) {
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+    }
+</style>
+
+    </div><!-- .controls -->
+
+    <hr class="clear">
+
+
+<div class="adsense">
+<script async="" src="./Flexy Boxes — CSS flexbox playground and code generation tool_files/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-9884671731478989" data-ad-slot="6697432152" data-adsbygoogle-status="done"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><ins id="aswift_0_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><iframe width="728" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+</div><!-- .outer-wrap -->
+
+
+<footer>
+    <div class="copy outer-wrap">
+
+        <h2>Flexbox browser support</h2>
+
+        <p>Three versions of the flexbox spec – each with different syntax – have been implemented in browsers.</p>
+
+        <p>The two 2012 specs are roughly equivilant in terms of features, differing mainly in syntax. The earlier 2009 spec is less comprehensive though covers a lot of the same ground.</p>
+
+        <ol class="speclist">
+            <li data-flextype="flex">
+                <h3>Flexbox 2012 <a href="http://www.w3.org/TR/css3-flexbox">— W3C Candidate Recommendation, September 2012</a></h3>
+                <p>Opera 12.1+, Firefox 22+. Chrome 21 <code>-webkit-</code></p>
+            </li>
+
+            <li data-flextype="flexbox">
+                <h3>Flexbox early 2012 <a href="http://www.w3.org/TR/2012/WD-css3-flexbox-20120322">— W3C Working Draft, 22 March 2012</a></h3>
+                <p>Internet Explorer 10 <code>-ms-</code></p>
+            </li>
+
+            <li data-flextype="box">
+                <h3>Flexbox 2009 <a href="http://www.w3.org/TR/2009/WD-css3-flexbox-20090723">— W3C Working Draft, 23 July 2009</a></h3>
+                <p>Firefox 2+ <code>-moz-</code>, Chrome 4+ <code>-webkit-</code>, Safari 3.1+ <code>-webkit-</code>. iOS Safari 3.2+ <code>-webkit-</code></p>
+            </li>
+        </ol>
+
+
+        <p>More browser support info available on <a href="http://caniuse.com/flexbox">caniuse.com</a>.</p>
+
+
+        <h2>Known issues</h2>
+
+        <h3>Flexbox early 2012</h3>
+        <h4>Flexbox early 2012 (Internet Explorer 10)</h4>
+        <ul>
+            <li><p><code>align-content</code> (equiv. <code>flex-line-pack</code>) doesn't work if the cross axis dimension is set with <code>min-width</code> or <code>min-height</code></p></li>
+        </ul>
+
+        <h3>Flexbox 2009</h3>
+        <ul>
+            <li><p>Box wrapping is not supported. <code>box-lines</code> is the property in this spec to achieve wrapping, though unfortunately no browser implemented it.</p></li>
+            <li><p>Ordering flex-items with <code>box-ordinal-group</code> requires a positive integer (the value <code>0</code> is also valid in Firefox but not in Webkit, so just use positive integers).</p></li>
+        </ul>
+
+        <h4>Flexbox 2009 (Firefox)</h4>
+        <p>Firefox has a number of non-trivial issues with its 2009 implementation:</p>
+        <ul>
+            <li><p>The setting <code>display: box</code> is treated as <code>display: inline-box</code> if there is no width set.</p></li>
+            <li><p>Percentage widths set on flex items are ignored.</p></li>
+            <li><p>The setting <code>box-align: justify</code> (equiv. <code>justify-content: space-between</code>) does not work.</p></li>
+            <li><p>Flexbox ignores overflow: hidden and expands the flexbox child when the content is larger than the child’s width.</p></li>
+            <li><p>The outline on flexbox children is padded as if by a transparent border of the same width.</p></li>
+            <li><p>If you set <code>box-flex</code> to <code>0</code>, Firefox forces the element to act like it’s using the quirks-mode box model.</p></li>
+        </ul>
+
+
+        <h2>Further reading</h2>
+        <ul>
+            <li><p>Opera tutorial — <a href="http://dev.opera.com/articles/view/flexbox-basics/">Flexbox — fast track to layout nirvana?</a></p></li>
+            <li><p>MDN — <a href="https://developer.mozilla.org/en-US/docs/CSS/Using_CSS_flexible_boxes">Using CSS flexible boxes</a></p></li>
+            <li><p>MSDN — <a href="http://msdn.microsoft.com/en-us/library/ie/hh772069%28v=vs.85%29.aspx">Flexible Box ("Flexbox") Layout</a></p></li>
+            <li><p>Notes from @boblet (2009 flexbox) — <a href="http://oli.jp/2011/css3-flexbox/">CSS3 Flexbox vs A Princess Bride</a></p></li>
+        </ul>
+
+        <br>
+        <br>
+        <br>
+        <p class="colophon">Code and design by <a href="http://twitter.com/pete_b">@pete_b</a>. Prefixing and polyfills generated by <a href="http://the-echoplex.net/csscrush">CSS-Crush</a></p>
+
+
+        <hr class="clear">
+    </div><!-- .outer-wrap -->
+</footer>
+
+<script>
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-6938733-1']);
+_gaq.push(['_trackPageview']);
+(function() {
+    var ga = document.createElement('script');
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    ga.setAttribute('async', 'true');
+    document.documentElement.firstChild.appendChild(ga);
+})();
+</script>
+
+
+</body></html>
