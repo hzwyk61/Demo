@@ -1,0 +1,143 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-size: 12px;
+}
+
+article {
+    position: relative;
+}
+
+.container {
+    background-image: url(beijing.gif);
+    width: 100%;
+    padding-top: 8px;
+    padding-bottom: 15px;
+}
+
+.wallpaper {
+    background-color: snow;
+    width: 710px;
+    margin: 2px auto;
+    border-radius: 30px;
+    margin-bottom: 5px;
+}
+
+.heading {
+    height: 90px
+}
+
+.logo {
+    position: relative;
+    margin-left: 25px;
+    margin-top: 3px;
+    display: inline-block;
+    float: left;
+}
+
+.navigationBar {
+    position: relative;
+    display: inline-block;
+    margin-top: 60px;
+    margin-right: 35px;
+    float: right;
+}
+
+.navigationBar ul {
+    position: relative;
+    list-style-type: none;
+    float: right;
+    padding-right: 5px;
+}
+
+.navigationBar ul li {
+    display: inline;
+}
+
+.navigationBar ul li a:link,
+.navigationBar ul li a:visited {
+    text-decoration: none;
+    color: rgb(255, 0, 153);
+}
+
+span {
+    color: red;
+}
+
+.blue {
+    color: #0000ff;
+}
+
+.chart {
+    border: solid 1px lightgray;
+    border-collapse: collapse;
+    margin: 3px auto;
+}
+
+.chart caption {
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 18px;
+}
+
+.remark {
+    text-align: center;
+    line-height: 150%;
+    background-image: url(beijin1.gif);
+}
+
+.remark a:link,
+.remark a:visited {
+    color: #0000ff;
+}
+
+.tableHead {
+    text-align: left;
+    font-size: 13px;
+    line-height: 150%;
+    color: rgb(0, 51, 153);
+    padding-left: 15px;
+    background: rgb(238, 238, 238);
+}
+
+.firstTd {
+    width: 125px;
+}
+
+.chart tr td {
+    padding: 5px;
+    line-height: 18px;
+    border: solid 1px lightgray;
+    padding: 2px;
+}
+
+.checkbox {
+    margin: 3px 3px 2px 2px;
+}
+
+h5 {
+    margin-top: 10px;
+}
+
+strong {
+    margin-top: 10px;
+}
+
+.submit input {
+    height: 22px;
+    width: 86px;
+}
+
+.submit {
+    height: 80px;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    height: 40px;
+}
+
+footer small {
+    color: gray;
+}
