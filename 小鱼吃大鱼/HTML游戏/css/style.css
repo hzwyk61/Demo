@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    padding-top: 10px;
+}
+
+.container {
+    width: 800px;
+    height:600px;
+    margin: 0 auto;
+}
+
+.allCanvas {
+    position: relative;
+    width: 800px;
+    height: 600px;
+    margin: 0;
+}
+
+.allCanvas canvas{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.allCanvas .canvas1 {
+    z-index: 1;
+}
+
+.allCanvas .canvas2 {
+    z-index: 0;
+}
